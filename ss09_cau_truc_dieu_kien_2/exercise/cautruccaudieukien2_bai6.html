@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+<h2>Chương trình giải phương trình bậc nhất</h2>
+<p>ax +b = 0</p>
+Nhập vào giá trị của tham số a <input type="number" id="n1"> <br> <br>
+Nhập vào giá trị của tham số b <input type="number" id="n2"> <br> <br>
+<button onclick="giaiPtBacNhat()">OK</button>
+<script>
+    function giaiPtBacNhat() {
+        let a = +document.getElementById("n1").value;
+        let b = +document.getElementById("n2").value;
+        if (a === 0 && b === 0) {
+            alert("Phương trình vô số nghiệm");
+        }
+        else if (b===0 && a!=0){
+            alert("Phương trình có nghiệm là: 0")
+        }
+        else if (a===0 && b!=0){
+            alert("Phương trình vô nghiệm");
+        }
+        else {
+            let c = -b/a;
+            alert("Phương trình có nghiệm:" + c);
+        }
+    }
+</script>
+</body>
+</html>

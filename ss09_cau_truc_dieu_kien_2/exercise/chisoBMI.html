@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập vào chiều cao<input id="cao" type="text">
+    Nhập vào cân nặng <input id="nang" type="text">
+    <button onclick="chiSoCanNang()">OK</button>
+</form>
+</body>
+</html>
+<script>
+    function chiSoCanNang() {
+        let a = +document.getElementById("cao").value;
+        let b = +document.getElementById("nang").value;
+        let bmi = b / (a * a);
+        if (bmi < 18) {
+            alert("underweight");
+        } else if (bmi < 25) {
+            alert("normal")
+        } else if (bmi < 30) {
+            alert("Overweight")
+        } else {
+            alert("Obese")
+        }
+    }
+</script>

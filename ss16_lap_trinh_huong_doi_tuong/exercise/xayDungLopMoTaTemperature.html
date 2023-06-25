@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+
+
+<script>
+    class TemPerature {
+        constructor(celius) {
+            this.celius = celius;
+        }
+        setCelius(celius) {
+            this.celius = celius;
+        }
+
+        convertTofahrenheit() {
+            return this.celius * 9 / 5 + 32;
+        }
+
+        convertToKelvins() {
+            return this.celius + 273.15;
+        }
+    }
+
+    let temperature = new TemPerature();
+    temperature.setCelius(prompt("Nhap do C"));
+    document.write("Fahrenheit: " + temperature.convertTofahrenheit() + "<br>");
+    document.write("Kelvins: " + temperature.convertToKelvins());
+
+</script>
+
+
+</body>
+</html>

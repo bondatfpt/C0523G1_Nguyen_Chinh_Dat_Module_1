@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkStars(starName) {
+        let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let index = -1;
+        for (let i = 0; i < stars.length; i++) {
+            if (starName.toLowerCase().trim() === stars[i].toLowerCase().trim()) {
+                index = i;
+                document.write("Ngôi sao bạn chọn thuộc chòm sao " + constellation[index]);
+            }
+        }
+        if (index === -1) {
+            document.write("Not Found");
+        }
+    }
+
+    let starUserEnter = prompt("Nhập tên ngôi sao");
+    checkStars(starUserEnter);
+
+
+</script>
+</body>
+</html>

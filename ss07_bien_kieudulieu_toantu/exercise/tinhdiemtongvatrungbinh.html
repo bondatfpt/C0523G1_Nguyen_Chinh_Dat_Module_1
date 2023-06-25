@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Điểm Lý <input id="n1" type="number" name="diemly"></label><br><br>
+    <label>Điểm Hóa <input id="n2" type="number" name="diemHoa"></label><br><br>
+    <label>Điểm Sinh<input id="n3" type="number" name="diemSinh"></label><br><br>
+    <input onclick="tongDiem()" id="btn" type="submit" value="OK">
+
+    <script>
+        function tongDiem(){
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var c = document.getElementById("n3").value;
+            var sum = parseFloat(a) + parseFloat(b)+ parseFloat(c);
+            alert("Tổng điểm 3 môn là:" + sum + "điểm");
+            var dtb = sum / 3;
+            alert("Điểm trung bình là:" + dtb + "điểm");
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrNumbers = [0, 1, 5, 9, 10, 11, 12, 15, 16, 9];
+    document.write(arrNumbers.join(' '));
+
+    let a = +prompt("Mời  nhập vào 1 số");
+    let count = 0;
+    for (let i = 0; i < arrNumbers.length; i++) {
+        if (a === arrNumbers[i]) {
+            count++;
+        }
+    }
+    console.log(count);
+    if (count === 0) {
+        alert(a + " không phải là  phần tử của mảng")
+    } else {
+        alert(a + " là phần tử của mảng")
+
+    }
+
+</script>
+</body>
+</html>

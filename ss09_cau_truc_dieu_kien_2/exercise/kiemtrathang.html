@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Kiểm tra số ngày trong tháng</h2>
+<select id="month">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+</select>
+<button onclick="checkMonth()" id="btn">Check</button>
+<script>
+    function checkMonth() {
+        let months;
+        months = +document.getElementById("month").value;
+        switch (months) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert("Tháng " +  months +  " có 31 ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("Tháng " +  months +  " có 30 ngày");
+                break;
+            case 2:
+                alert("Tháng " +  months +  " có 28 ngày");
+                break;
+        }
+    }
+</script>
+</body>
+</html>

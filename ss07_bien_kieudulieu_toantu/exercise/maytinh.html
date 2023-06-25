@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input style="width: 57px" type="number" id="number1"></td>
+        <td><input style="width: 57px" type="number" id="number2"></td>
+    </tr>
+    <tr>
+        <td><button onclick="cong2so()" id="cong">Cộng(+)</button></td>
+        <td><button onclick="tru2so()" id="tru">Trừ(-)</button></td>
+        <td><button onclick="nhan2so()" id="nhan">Nhân(*)</button></td>
+        <td><button onclick="chia2so()" id="chia">Chia(/)</button></td>
+    </tr>
+</table>
+<p id="ketqua"></p>
+
+<script>
+    function cong2so() {
+        let
+            a = document.getElementById("number1").value;
+        let
+            b = document.getElementById("number2").value;
+        a = parseFloat(a);
+        b= parseFloat(b);
+        result = "Kết quả là:" + (a + b);
+        document.getElementById("ketqua").innerHTML = result;
+    }
+    function tru2so (){
+        let
+            a = document.getElementById("number1").value;
+        let
+            b = document.getElementById("number2").value;
+        a = parseFloat(a);
+        b= parseFloat(b);
+        result = "Kết quả là:" + (a - b);
+        document.getElementById("ketqua").innerHTML = result;
+    }
+    function nhan2so(){
+        let
+            a = document.getElementById("number1").value;
+        let
+            b = document.getElementById("number2").value;
+        a = parseFloat(a);
+        b= parseFloat(b);
+        result = "Kết quả là:" + (a * b);
+        document.getElementById("ketqua").innerHTML = result;
+    }
+    function chia2so(){
+        let
+            a = document.getElementById("number1").value;
+        let
+            b = document.getElementById("number2").value;
+        a = parseFloat(a);
+        b= parseFloat(b);
+        result = "Kết quả là:" + (a / b);
+        document.getElementById("ketqua").innerHTML = result;
+    }
+
+</script>
+</body>
+</html>

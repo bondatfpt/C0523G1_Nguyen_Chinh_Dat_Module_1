@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th> Amount</th>
+            <th> From Currency</th>
+            <th> To Currency</th>
+        </tr>
+        <tr>
+            <td><input id="amount" type="number" name="amount"></td>
+            <td><select id="from">
+                <option value="VNĐ">VNĐ</option>
+                <option value="USD">USD</option>
+            </select></td>
+            <td><select id="to">
+                <option value="VNĐ">VNĐ</option>
+                <option value="USD">USD</option>
+            </select></td>
+            <td>
+                <button onclick="changeMoney()" name="btn" type="button">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="ketqua"></p>
+
+
+    <script>
+        function changeMoney(){
+            let a = document.getElementById("amount").value;
+            let b = document.getElementById("from").value;
+            let c = document.getElementById("to").value;
+            let result;
+            if(b == "VNĐ" && c=="USD"){
+                result ="Result:" + ( a / 23000) + "$";
+            }
+            else if (b=="USD" && c=="VNĐ"){
+                result = "Result:" + (a * 23000) + "Đ";
+            }
+            else if (b =="VNĐ"){
+                result = "Result:" + a;
+            }
+            else {
+                result = "Result:" + a;
+            }
+            document.getElementById("ketqua").innerHTML = result;
+        }
+    </script>
+</form>
+</body>
+</html>

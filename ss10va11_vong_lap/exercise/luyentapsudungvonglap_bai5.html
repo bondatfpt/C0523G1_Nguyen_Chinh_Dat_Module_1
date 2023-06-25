@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let f1 = 0;
+    let f2 = 1;
+    let result = 1;
+    let avg  = 0;
+    for (i = 0; i < 20; i++) {
+        avg += result;
+        result = f1 + f2;
+        f1 = f2;
+        f2 = result;
+    }
+    document.write("Tổng 20 số fibonacci đầu tiên là: " + avg);
+
+</script>
+</body>
+</html>

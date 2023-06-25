@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Khởi tạo mảng có các phần tử do người dùng nhập từ bàn phím
+    let n;
+    do {
+        n = +prompt("Nhập vào số lượng phần tử của mảng");
+        if (n <= 0) {
+            alert("Không hợp lệ, số phần tử phải lớn hơn 0 (n > 0) ");
+        }
+    }
+    while (n <= 0);
+    let i;
+    let arr = [];
+    for (i = 0; i < n; i++) {
+        arr[i] = prompt("Nhập vào phần tử thứ" + (i + 1));
+    }
+    document.write("Mảng có " + i + " phần tử: " + arr + "<br>");
+    // Mảng đảo ngược
+    let first = 0;
+    let last = arr.length - 1;
+    while (first < last) {
+        let j = arr[first];
+        arr[first] = arr[last];
+        arr[last] = j;
+        first++;
+        last--;
+    }
+    document.write("Mảng đảo ngược là: " + arr.join(''));
+
+</script>
+</body>
+</html>

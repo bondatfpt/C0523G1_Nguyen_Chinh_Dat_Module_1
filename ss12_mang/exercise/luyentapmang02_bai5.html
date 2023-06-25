@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = prompt("Nhập 1 chuỗi bất kì");
+    let b = prompt("Nhập 1 chuỗi bất kì");
+    let c = a.split("");
+    let d = b.split("");
+    let same = 0;
+    let different = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] === b[j]) {
+                same++;
+            } else {
+                different++;
+            }
+        }
+    }
+    if (same === a.length && same === b.length){
+        alert("2 chuỗi giống nhau");
+    }
+    else {
+        alert("2 chuỗi khác nhau");
+    }
+
+</script>
+
+</body>
+</html>

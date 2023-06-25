@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+
+<script>
+    class Moblie {
+        constructor(battery, draft, inbox, outbox, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+
+        checkStatus() {
+            if (this.status === true) {
+                alert("Điện thoại đang bật");
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+            this.battery--;
+        }
+
+        turnOn() {
+            this.status = true;
+            this.battery--;
+            console.log("Đã bật điện thoại");
+        }
+
+        turnOff() {
+            this.status = false;
+            console.log("Đã tắt điện thoại");
+        }
+
+        charge() {
+            if (this.battery < 100) {
+                this.battery += 10;
+            } else {
+                alert("Chai pin bây giờ");
+            }
+        }
+
+        setDraft(message) {
+            if (this.status === true) {
+                this.draft.unshift(message);
+                this.battery--;
+            } else {
+                alert("Bật điện thoại lên rồi làm chi làm");
+            }
+        }
+
+        sendMessage(message, mobile) {
+            if (this.status === true) {
+                this.outbox.push(message);
+                mobile.inbox.unshift(message);
+                this.battery--;
+            } else {
+                alert("Nhắc quài, bật đth lên đã !");
+            }
+        }
+
+        receiveMessage(message) {
+            if (this.status === true) {
+                this.inbox.unshift(message);
+                alert("Ting Ting");
+            } else {
+                alert("Muốn xem tin nhắn mới không, bật đth lên đi");
+            }
+            this.battery--;
+        }
+    }
+
+    let nokia = new Moblie(50, [], [], [], true);
+    let iphone = new Moblie(60, [], [], [], false);
+    // console.log(nokia.battery);
+    // nokia.turnOff();
+    // nokia.checkStatus();
+    // nokia.setDraft("OK");
+    // nokia.setDraft("Hihi");
+    // console.log(nokia.battery);
+    // nokia.sendMessage("Hê hê",iphone);
+    // console.log(iphone.inbox);
+    // console.log(nokia.draft);
+    // iphone.sendMessage("Bật điện thoại lên xem nè", nokia);
+    // console.log(nokia.inbox);
+    // console.log(iphone.outbox);
+    // console.log(iphone.inbox);
+    // console.log(nokia.draft);
+    // nokia.sendMessage("ê bạn", iphone);
+    // iphone.receiveMessage();
+    // iphone.turnOn();
+    // nokia.sendMessage("Hê hê",iphone);
+    // iphone.receiveMessage();
+
+
+    // console.log(iphone.inbox);
+
+
+</script>
+</body>
+</html>

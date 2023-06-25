@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<H2>Market Research Survey</H2>
+<p>Please take a few moments to complete this satisfaction survey</p>
+<form action="google.com" method="post">
+    <p>What is your are range?</p>
+    <select name="What is your are range?">
+        <option value="age">18-24</option>
+        <option value="age">25-34</option>
+        <option value="age">35-50</option>
+        <option value="age">50+</option>
+    </select>
+</form>
+<form action="google.com" method="post">
+    <p>What is your are range?</p>
+    <select name="What is your yearly income range?">
+        <option value="usd">$0 - $25,000</option>
+        <option value="usd">$25,000 - $50,000</option>
+        <option value="usd">$50,000 - $100,000</option>
+        <option value="usd">$100,000+</option>
+    </select>
+</form>
+<form action="google.com" method="post">
+    Gender Identity <br>
+    <label><input name="gender" value="male" type="radio" checked/>Male</label><br>
+    <label><input name="gender" value="female" type="radio" checked/>Female</label>
+</form>
+<form action="google.com" method="post">
+    <p>What of the following products have your purchased in the 2 last month?</p>
+    <lable><input type="checkbox" name="prd 1">Product 1</lable>
+    <br>
+    <lable><input type="checkbox" name="prd 2">Product 2</lable>
+    <br>
+    <lable><input type="checkbox" name="prd 3">Product 3</lable>
+    <br>
+</form>
+<form action="google.com" method="post">
+    <p>How often would you use new product?</p>
+    <label><input name="time" value="time" type="radio" checked/>Daily</label><br>
+    <label><input name="time" value="time" type="radio"/>Weekly</label><br>
+    <label><input name="time" value="time" type="radio"/>Monthly</label>
+</form>
+<form action="google.com" method="post">
+    <p>What would you pay for the new products?</p>
+    <table>
+        <tr>
+            <td>$</td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><label>Dollars</label></td>
+            <td><label>Cents</label></td>
+        </tr>
+    </table>
+</form>
+<form action="google.com" method="post">
+    <p>What features would you like to see in the new product?</p>
+    <textarea style="width: 100%; height: 200px"></textarea>
+</form>
+<form action="google.com" method="post">
+    <p>Please rate your level of agreement with the following statements.</p>
+    <table class="bang" border="1">
+        <tr style="background-color: darkgray">
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strong Agree</td>
+        </tr>
+        <tr>
+                <th>Our products are priced fairly.</th>
+            <form action="https://ken.codegym.vn/boards/23031" method="post">
+                <td><label><input name="number" value="1" type="radio">1</label></td>
+                <td><label><input name="number" value="2" type="radio">2</label></td>
+                <td><label><input name="number" value="3" type="radio">3</label></td>
+                <td><label><input name="number" value="4" type="radio">4</label></td>
+            </form>
+
+        </tr>
+        <tr>
+            <th>Our products are high quality.</th>
+            <form action="https://ken.codegym.vn/boards/23031" method="post">
+                <td><label><input name="number1" value="1" type="radio">1</label></td>
+                <td><label><input name="number1" value="2" type="radio">2</label></td>
+                <td><label><input name="numbe1" value="3" type="radio">3</label></td>
+                <td><label><input name="number1" value="4" type="radio">4</label></td>
+            </form>
+
+        </tr>
+        <tr>
+            <th>You would recommend our product to a friend or coworker.</th>
+            <form action="https://ken.codegym.vn/boards/23031" method="post">
+                <td><label><input name="number1" value="1" type="radio">1</label></td>
+                <td><label><input name="number1" value="2" type="radio">2</label></td>
+                <td><label><input name="number1" value="3" type="radio">3</label></td>
+                <td><label><input name="number1" value="4" type="radio">4</label></td>
+            </form>
+        </tr>
+    </table>
+    <input type="submit" name="submit" value="Submit">
+</form>
+<style>
+    .bang, tr, td {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+    }
+
+    .bang, td {
+        text-align: center;
+    }
+</style>
+</body>
+</html>

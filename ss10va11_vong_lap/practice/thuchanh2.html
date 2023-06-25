@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính tổng</title>
+</head>
+<body>
+<h2> Chương trình tính tổng</h2>
+Nhập vào 1 số <input type="number" id="n1">
+<button onclick="chuongTrinhTinhTong()">OK</button>
+<p id="n2"></p>
+<script>
+    function chuongTrinhTinhTong() {
+        let i = 1
+        let a = document.getElementById("n1").value;
+        let sum=0;
+        for (i = 1; i <= a; i++) {
+            sum = sum + i;
+        }
+        document.getElementById("n2").innerHTML = sum;
+    }
+</script>
+</body>
+</html>

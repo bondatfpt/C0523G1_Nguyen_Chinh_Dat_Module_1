@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình kiểm tra 1 số có phải là số tuổi của 1 người</title>
+</head>
+<body>
+<h2>Chương trình kiểm tra 1 số có phải là số tuổi của 1 người</h2>
+Mời nhập vào 1 số <input type="number" id="n1">;
+<button onclick="ageCheck()">OK</button>
+<script>
+  function ageCheck(){
+    let a = +document.getElementById("n1").value;
+    a = parseInt(a);
+    if (a >0 && a < 120){
+      alert(a + " có thể là số tuổi của 1 người")
+    }
+    else {
+      alert(a + " không phải là số tuổi của 1 người")
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Ctrinh tính chu vi, diện tích hình tròn </h2>
+<form>
+    <label>Nhập vào đường kính <input id="d" type="number"></label>
+    <button onclick="tinhChuViHinhTron()">OK</button>
+</form>
+<h2>Ctrinh tính diện tích hình tròn</h2>
+<form>
+    <label>Nhập vào bán kính <input id="r" type="number"></label>
+    <button onclick="tinhDienTichHinhTron()">OK</button>
+</form>
+
+<script>
+    function tinhChuViHinhTron() {
+        var a = document.getElementById("d").value;
+        var C = a * 3.14;
+        alert("Chu vi là:" + C + "cm")
+    }
+
+    function tinhDienTichHinhTron() {
+        var a = document.getElementById("r").value;
+        var S = a * a * 3.14;
+        alert("Diện tích hình tròn là:" + S + "cm²")
+    }
+</script>
+</body>
+</html>

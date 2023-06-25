@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4" style="text-align: right; height: 30px; border: solid black 1px">
+            <span id="result"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="mayTinh('1')" type="button">1</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('2') " type="button">2</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('3') " type="button">3</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('+') " type="button">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="mayTinh('5') " type="button">4</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('6') " type="button">5</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('7') " type="button">6</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('-') " type="button">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="mayTinh('7') " type="button">7</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('8') " type="button">8</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('9') " type="button">9</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('*') " type="button">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="mayTinh('C') " type="button">C</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('0') " type="button">0</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('=') " type="button">=</button>
+        </td>
+        <td>
+            <button onclick="mayTinh('/') " type="button">/</button>
+        </td>
+    </tr>
+    <style>
+        tr, td, button {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function mayTinh(i) {
+            let ketqua = document.getElementById("result").innerText;
+            switch (i) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                    ketqua = ketqua + i;
+                    break;
+                case '=':
+                    ketqua = eval(ketqua);
+                    break;
+                case 'C':
+                    ketqua = ''
+                    break;
+            }
+            document.getElementById("result").innerText = ketqua;
+        }
+    </script>
+</table>
+</body>
+</html>

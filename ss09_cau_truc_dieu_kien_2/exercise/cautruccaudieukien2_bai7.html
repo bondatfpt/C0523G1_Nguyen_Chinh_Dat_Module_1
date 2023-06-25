@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình giải phương trình bậc 2</title>
+</head>
+<body>
+<h2> Chương trình giải phương trình bậc 2</h2>
+<p>Phương trình bậc 2 có dạng: ax² + bx + c = 0</p>
+Nhập giá trị tham số a <input type="number" id="n1"> <br> <br>
+Nhập giá trị tham số b <input type="number" id="n2"> <br> <br>
+Nhập giá trị tham số c <input type="number" id="n3"> <br> <br>
+<button onclick="giaiPtBacHai()">OK</button>;
+<script>
+    function giaiPtBacHai(){
+        let a = +document.getElementById("n1").value;
+        let b = +document.getElementById("n2").value;
+        let c = +document.getElementById("n3").value;
+        let delta = Math.pow(b,2) - 4 * a * c;
+        if (delta>0){
+            let d = (-b + Math.sqrt(delta))/2 *a;
+            let e = (-b - Math.sqrt(delta))/2 *a;
+            alert("Phương trình có 2 nghiệm phân biệt x1=" + d + " ,x2=" + e);
+        }
+        else if (delta<0){
+            alert("Phương trình vô nghiệm");
+        }
+        else {
+            let f = -b / 2 * a;
+            alert("Phương trình có nghiệm kép x1 = x2 = " + f);
+        }
+    }
+</script>
+</body>
+</html>

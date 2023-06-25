@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyentaplophcn</title>
+</head>
+<canvas id="myCanvas" width="800px" height="300px" style="border: 1px solid #333333"></canvas><br>
+<body>
+<script>
+    class HinhChuNhat {
+        setHeight (height){
+            this.height = height;
+        }
+        setWidth (width){
+            this.width = width;
+        }
+        getHeight (){
+            return this.height;
+        }
+        getWidth (){
+            return this.width;
+        }
+        getArea (){
+            return width * height;
+        }
+        getPerimeter (){
+            return (width + height) *2;
+        }
+        getCreatHCN (){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "yellow";
+            ctx.fillRect((500 - this.width) / 2, (500 - this.height) / 2, this.width, this.height);
+        }
+    }
+    let hinhChuNHat = new HinhChuNhat();
+    let width = hinhChuNHat.width;
+    let height = hinhChuNHat.height;
+    hinhChuNHat.setHeight(prompt("enter a number"));
+    hinhChuNHat.setWidth(prompt("enter a number"));
+    hinhChuNHat.getCreatHCN();
+    
+</script>
+</body>
+</html>

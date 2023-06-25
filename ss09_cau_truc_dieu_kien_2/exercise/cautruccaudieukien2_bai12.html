@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính lãi suất kép ngân hàng</title>
+</head>
+<body>
+Số tiền đã vay <input type="number" id="n1">
+Vay trong vòng bao nhiêu tháng <input type="number" id="n2">
+<button onclick="tinhLaiSuatKep()">OK</button>
+<script>
+    function tinhLaiSuatKep(){
+        let a = + document.getElementById("n1").value;
+        let b = + document.getElementById("n2").value;
+        // c là lãi suất trong 1 tháng
+        let c = 7/100;
+        // d là lãi suất kép phải trả dưạ trên số tiền đã vay và số tháng hoàn trả
+        let d = a *((1+c)**(b/12)-1)
+        alert("Tiền lãi bạn phải trả là: " + d + "VNĐ ")
+    }
+</script>
+</body>
+</html>

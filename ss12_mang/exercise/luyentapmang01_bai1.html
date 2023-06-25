@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+  let n;
+  do{
+    n = +prompt("Nhập vào số lượng phần tử của mảng");
+    if (n<=0 || n > 10){
+      alert("Không hợp lệ, số phần tử phải lớn hơn 0 (n > 0) và bé hơn 10 (n < 10)");
+    }
+  }
+  while(n<=0 || n > 10);
+  let arr = [];
+  for (let i = 0 ; i < n ; i ++){
+    arr[i] = +prompt("Nhập vào phần tử thứ" + ( i + 1));
+  }
+  document.write(arr);
+  let count = 0;
+  for (let i = 0 ; i < arr.length; i++){
+      if (arr[i] >= 10){
+          count ++;
+      }
+  }
+  alert("Số phần tử có giá trị bằng 10 hoặc lớn hơn 10 là: "  +  count);
+
+</script>
+</body>
+</html>

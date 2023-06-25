@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính cước điện thoại</title>
+</head>
+<body>
+<h2>Chương trình tính cước điện thoại bàn</h2>
+<p>Phí thuê bao bắt buộc là 25 nghìn.</p>
+<p>600 đồng cho mỗi phút gọi của 50 phút đầu tiên.</p>
+<p>400 đồng cho mỗi phút gọi của 150 phút tiếp theo.</p>
+<p>200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.</p>
+<input id="n1" type="number" placeholder="Nhập vào số phút đã gọi">
+<button onclick="tinhCuocDienThoai()">Ok</button>
+<script>
+    function tinhCuocDienThoai() {
+        let a = +document.getElementById("n1").value;
+        if (a > 200) {
+            let c = ((a - 200) * 200) + (50 * 600) + (150 * 400) + 25000;
+            alert("Tháng này đóng " + c + " VNĐ tiền điện thoại nhé cưng")
+        } else if (a>50) {
+            c = 50 * 600 + (a-50)*400 + 25000;
+            alert("Tháng này đóng"+ c + " VNĐ tiền điện thoại nhé cưng");
+        } else {
+            c = a * 600  + 25000;
+            alert("Tháng này đóng" + c + " VNĐ tiền điện thoại nhé cưng");
+            }
+        }
+
+</script>
+</body>
+</html>

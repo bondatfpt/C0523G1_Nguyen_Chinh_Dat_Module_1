@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+Nhập vào số lượng số fibonacci cần in ra  <input type="number" id="n1">
+<button onclick="inFibonacci()">OK</button>
+<script>
+    function inFibonacci() {
+        let i;
+        let n = document.getElementById("n1").value;
+        let f1 = 0;
+        let f2 = 1;
+        let result = 0;
+        let stt = "1: 1 <br\>"
+        for (i = 2; i < n; i++) {
+            result = f1 + f2;
+            stt += i + ": " + result + "<br\>";
+            f1 = f2;
+            f2 = result;
+        }
+        document.write(stt);
+    }
+</script>
+</body>
+</html>

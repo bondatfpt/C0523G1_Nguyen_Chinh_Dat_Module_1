@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edam Va Eva An Tao</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                alert("Het roi");
+                return false;
+            } else {
+                alert("Cắn nhẹ thôi");
+                return true;
+            }
+        }
+
+    }
+
+    let apple = new Apple(10);
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+
+        sayLoveYou (string){
+            return string;
+        }
+
+        checkApple(apple) {
+            return apple.getWeight();
+        }
+        eat (apple){
+            if (apple.weight > 0){
+                this.weight ++;
+                apple.weight --;
+            }
+            else {
+                alert("Còn chi mô mà ăn");
+            }
+        }
+
+    }
+    // ADAM
+    let human = new Human("Adam","Male",60);
+    let name = human.getName();
+    console.log(human);
+    console.log(human.sayLoveYou("Lớp viu, Eva"));
+    console.log("Quả táo còn mấy kí nhỉ?",human.checkApple(apple));
+    human.eat(apple);
+    console.log("Ăn có miếng táo mà lên 1 kí luôn",human.weight);
+    console.log("Trọng lượng quả táo còn: ",apple.weight);
+
+    // EVA
+    let human1 = new Human("Eva","Female",50);
+    console.log(human1);
+    console.log(human1.sayLoveYou("Me too, Adam~~"));
+    console.log("Quả táo còn mấy kí nhỉ?",human1.checkApple(apple));
+    human1.eat(apple);
+    console.log("Ăn có miếng táo mà lên 1 kí luôn",human1.weight);
+    console.log("Trọng lượng quả táo còn: ",apple.weight);
+</script>
+</body>
+</html>

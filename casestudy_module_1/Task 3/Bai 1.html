@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrefixSums</title>
+</head>
+<body>
+<script>
+    // Khởi tạo 1 mảng với độ dài và giá trị phần tử do người dùng nhập;
+    let numberOfElements;
+    do {
+        numberOfElements = +prompt("Nhập vào số lượng phần tử của mảng");
+        if (numberOfElements <= 0) {
+            alert("Số lượng phần tử của mảng phải lớn hơn 0");
+        }
+    }
+    while (numberOfElements <= 0);
+    let arrNumber = [];
+    for (let i = 0; i < numberOfElements; i++) {
+        arrNumber[i] = +prompt("Nhập phần tử thứ " + (i + 1));
+    }
+
+
+    // Khởi tạo, khai báo các phần tử của mảng PrefixSumsOfArr;
+    let prefixSumsOfarr = [];
+    let firstElements;
+    let sumOfArr = 0;
+    // Gán giá trị cho prefixSumsOfArr[1];
+    firstElements = arrNumber[0] + arrNumber[1];
+    // Tìm prefixSumsOfArr[2];
+    for (let i = 0; i < arrNumber.length; i++) {
+        sumOfArr += arrNumber[i];
+    }
+    prefixSumsOfarr.push(arrNumber[0], firstElements, sumOfArr);
+    document.write("PrefixOfArrNumber là: " + prefixSumsOfarr);
+
+</script>
+</body>
+</html>

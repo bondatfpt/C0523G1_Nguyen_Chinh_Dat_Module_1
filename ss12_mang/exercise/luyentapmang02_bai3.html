@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập vào số lượng phần tử của mảng");
+        if (n <= 0) {
+            alert("Không hợp lệ, số phần tử phải lớn hơn 0 (n > 0) ");
+        }
+    }
+    while (n <= 0);
+    let i;
+    let arr = [];
+    for (i = 0; i < n; i++) {
+        arr[i] = prompt("Nhập vào phần tử thứ" + (i + 1) + " với kí tự số bé hơn hoặc bằng 9");
+    }
+    let length = arr.length;
+    document.write(arr + " có độ dài " + length);
+    let number = [0,1,2,3,4,5,6,7,8,9];
+    let count = 0 ;
+    for ( let x = 0 ; x < arr.length; x++){
+        for ( let z = 0; z < number.length; z++){
+            if (number[z] == arr[x]){
+                count++;
+            }
+        }
+    }
+    console.log(count);
+
+</script>
+</body>
+</html>

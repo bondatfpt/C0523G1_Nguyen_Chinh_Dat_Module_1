@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // function noteThamSoVaDoiSO (thamSo, doiSo){
+    //       document.write(typeof thamSo,typeof doiSo);
+    // }
+    // noteThamSoVaDoiSO("Doi So","tham so");
+
+    // let a = [1,2,3, "đấ", null, undefined];
+    // console.log(a);
+    // var isConfirm = confirm("OK?");
+    // console.log(isConfirm);
+    //
+    // let a = new Array(5);
+    // console.log(a);
+    // tich2So(5,5);
+    function quaTrinhConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "OK, chơi thôi";
+        } else {
+            result = "Không chơi thì thôi";
+        }
+        return result;
+    }
+
+    let chapNhanTraLoi = confirm("ok");
+    let cauTraLoi = quaTrinhConfirm(chapNhanTraLoi);
+    alert(cauTraLoi);
+</script>
+</body>
+</html>

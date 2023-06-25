@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược số nguyên</title>
+</head>
+<body>
+<script>
+    function reverseNumbers (arr){
+       temp = arr [0];
+       arr[0] = arr[1];
+       arr[1] = temp;
+       return arr;
+    }
+    let arr1 = [];
+    for (let i = 0; i < 2; i++){
+        arr1[i] = +prompt("Nhập vào số thứ " + (i + 1));
+    }
+    document.write("Đổi chỗ 2 số vừa nhập: " +  reverseNumbers(arr1));
+</script>
+</body>
+</html>

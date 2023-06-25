@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công Tắc Và Bóng Đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus() {
+            return this.status;
+        }
+        setStatus (status){
+            this.status = status;
+        }
+        conectToLamp(electriclamp){
+            if (this.status === true && electriclamp.status===true){
+                alert("Conecting");
+            }
+            else{
+                alert("Broken!");
+            }
+        }
+
+
+        turnOn() {
+            if (this.status === true && electricLamp.status === true) {
+                alert("ElectricLamp is lighting");
+            } else {
+                alert("Broken!")
+            }
+        }
+
+        turnOff() {
+            this.setStatus(false);
+            electricLamp.setStatus(false);
+            alert("ElectricLamp is off");
+        }
+
+
+        checkStatus() {
+            if (this.status === true) {
+                alert("Switch is ready");
+            } else {
+                alert("Switch is not ready");
+            }
+        }
+
+    }
+
+    let switchButton = new SwitchButton(false); // Công tắc đang trong trạng thái không sẵn sàng để kết nối
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus(status) {
+            this.status = status;
+        }
+
+        checkStatus() {
+            if (this.status) {
+                alert("ElectricLamp is ready");
+            } else {
+                alert("ElectricLamp is not ready");
+            }
+        }
+
+    }
+
+    let electricLamp = new ElectricLamp(false); // Bóng đèn đang trong trạng thái không sẵn sàng để kết nối
+
+
+    electricLamp.checkStatus(); // Bóng đèn đang trong trạng thái không sẵn sàng để kết nối với công tắc
+    electricLamp.setStatus(true); // Chuyển trạng thái bóng đèn sang sẵn sàng đề kết nối với công tắc
+    electricLamp.checkStatus();  // Bóng đã đã sẵn sàng để kết nối với công tắc
+    switchButton.checkStatus(); // Công tắc đang trong trạng thái không sẵn sàng để kết nối với bóng đèn
+    switchButton.setStatus(true); // Chuyển trạng thái công tắc sang sẵn sàng để kết nối với bóng đèn
+    switchButton.checkStatus();  // Công tắc đã sẵn sàng để kết nối với bóng đèn
+    switchButton.conectToLamp(electricLamp); //  Thiết lập kết nối giữa công  tắc và bóng đèn
+    switchButton.turnOn();  // Mở công tắc và đèn đã sáng.
+
+
+
+</script>
+</body>
+</html>

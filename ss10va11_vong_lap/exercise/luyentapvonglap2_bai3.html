@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+<script>
+
+
+    // hình tam giác vuông 1
+    for ( let i = 1; i <= 5; i++) {
+        for ( let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    // hình tam giác vuông 2
+    for (let i = 5; i >= 1; i--) {
+        for ( let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    //  hình tam giác vuông 3
+
+    for ( let i = 1; i <= 5; i++) {
+        for ( let j = 0; j < 5 - i; j++) {
+            document.write("&nbsp ");
+        }
+        for ( let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+
+    document.write("<br/>");
+
+    // hình tam giác vuông 4
+    for ( let i = 5; i >=1 ; i--) {
+        for ( let j = 0; j < 5 - i; j++) {
+            document.write("&nbsp ");
+        }
+        for ( let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+
+
+
+</script>
+</body>
+</html>

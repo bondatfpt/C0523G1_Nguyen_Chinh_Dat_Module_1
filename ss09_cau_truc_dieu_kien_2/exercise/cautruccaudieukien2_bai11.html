@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế cá nhân</title>
+</head>
+<style>
+    table, td, th, tr {
+        border: 1px solid;
+        border-collapse: collapse;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+<body>
+<h2> Chương trình tính thuế thu nhập cá nhân</h2>
+Nhập vào phần tiền chịu thuế TNCN <input type="number" id="n1">
+<button onclick="tinhThueTncn()">OK</button>
+
+<table>
+    <tr>
+        <th>Bậc</th>
+        <th>Thu nhập tính thuế</th>
+        <th>Thuế suất</th>
+        <th>Cách tính thuế TNCN phải nộp</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Đến 5 triệu</td>
+        <td>5%</td>
+        <td>5% thu nhập tính thuế</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Trên 5 triệu đến 10 triệu</td>
+        <td>10%</td>
+        <td>10% thu nhập tính thuế - 0,25 triệu</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Trên 10 triệu - 18 triệu</td>
+        <td>15%</td>
+        <td>15% thu nhập tính thuế - 0,75 triệu</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Trên 18 triệu - 32 triệu</td>
+        <td>20%</td>
+        <td>20% thu nhập tính thuế - 1,65 triệu</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Trên 32 triệu - 52 triệu</td>
+        <td>25%</td>
+        <td>25% thu nhập tính thuế - 3,25 triệu</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Trên 52 triệu - 80 triệu</td>
+        <td>30%</td>
+        <td>30 % thu nhập tính thuế - 5,85 triệu</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Trên 80 triệu</td>
+        <td>35%</td>
+        <td>35% TNTT - 9,85 triệu</td>
+    </tr>
+</table>
+<script>
+    function tinhThueTncn() {
+        let a = +document.getElementById("n1").value;
+        let t = 250000;
+        let y = 750000;
+        let u = 1650000;
+        let i = 3250000;
+        let o = 5850000;
+        let p = 9850000;
+
+        let z = 5000000;
+        let x = 10000000;
+        let c = 18000000;
+        let v = 32000000;
+        let n = 52000000;
+        let m = 80000000;
+        if (a <= z) {
+            let b = a * 5 / 100;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+        } else if (a <= x) {
+            b = (a * 10 / 100) - t;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+        } else if (a <= c) {
+            b = (a * 15 / 100) - y;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+
+        } else if (a <= v) {
+            b = (a * 20 / 100) - u;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+
+        } else if (a <= n) {
+            b = (a * 25 / 100) - i;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+
+        } else if (a <= m) {
+            b = (a * 30 / 100) - o;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+
+        } else {
+            b = (a * 35 / 100) - p;
+            alert("Tiền thuế TNCN bạn phải đóng là:" + b + "VNĐ");
+
+        }
+    }
+</script>
+
+</body>
+</html>

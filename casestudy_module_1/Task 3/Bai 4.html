@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu thức uống</title>
+</head>
+<style>
+    table, td, th {
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th style="width:150px">Cà phê</th>
+        <th style="width:150px">Cam vắt</th>
+        <th style="width:150px">Nước ép cà rốt</th>
+        <th style="width:150px">Nước ép cà chua</th>
+        <th style="width:150px">Nước lọc</th>
+        <th style="width:150px">Nước dừa</th>
+        <th style="width:150px">Kết thúc</th>
+    </tr>
+    <tr>
+        <td>
+            <button style="width: 150px" id="1" onclick="quantityWater()">1</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="2" onclick="quantityWater()">2</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="3" onclick="quantityWater()">3</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="4" onclick="quantityWater()">4</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="5" onclick="quantityWater()">5</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="6" onclick="quantityWater()">6</button>
+        </td>
+        <td>
+            <button style="width: 150px" id="7">7</button>
+        </td>
+    </tr>
+
+    <script>
+        // Hàm nhập số lượng đồ uống;
+        function quantityWater(quantity) {
+            do {
+                let quantity = +prompt("Nhập số lượng bạn muốn");
+                if (quantity <= 0) {
+                    alert("Mời bạn nhập lại");
+                }
+            }
+            while (quantity <= 0)
+        }
+        function waterBill(){
+
+        }
+
+    </script>
+</table>
+</body>
+</html>

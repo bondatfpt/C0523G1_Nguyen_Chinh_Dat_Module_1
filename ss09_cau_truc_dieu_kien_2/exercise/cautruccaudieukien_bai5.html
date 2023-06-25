@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học sinh dựa vào điểm trung bình</title>
+</head>
+<body>
+<h2>Xếp hạng học sinh dựa vào điểm trung bình</h2>
+<p>Công thức tính điểm trung bình: (điểm thi giữa kì + điểm thi cuối kì * 2)/3.</p>
+<p>Điểm cao nhất:10
+   Điểm thấp nhất:0</p>
+Nhập điểm thi giữa kỳ<input type="number" id="n1" max="10" min="0">
+Nhập điểm thi cuối kỳ<input type="number" id="n2" max="10" min="0">
+<button id="btn" onclick="xepHangHocSinh()">Ok</button>
+<script>
+    function xepHangHocSinh(){
+        let a = +document.getElementById("n1").value;
+        let b = +document.getElementById("n2").value;
+        // điểm thi cuối kì hệ số 2
+        let c = (a + (b*2))/3
+        if (c<5){
+            alert("Xếp hạng loại trung bình với điểm trung bình:" + c);
+        }
+        else if(c<8){
+            alert("Xếp hạng loại khá với điểm trung bình:" + c);
+        }
+        else {
+            alert("Xếp hạng loại giỏi với điểm trung bình:" + c);
+        }
+    }
+</script>
+</body>
+</html>

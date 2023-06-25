@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = ["-","a","-","b","-","c","-"];
+    // let b = JSON.stringify(a).replace(/-/g,"_");
+    // document.write(a + "<br>");
+    // document.write(b);
+    for ( let i = 0 ; i< a.length; i ++){
+        if (a[i] === "-"){
+            a[i] = "_";
+        }
+    }
+    document.write(a.join("  "));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaxFraction</title>
+</head>
+<body>
+<script>
+    // Hàm tạo mảng ngẫu nhiên từ 0 đến 100;
+    function arrayRandom (quantity){
+        let array = [];
+        for (let i = 0; i < quantity; i++) {
+            array.push(Math.round(Math.random()*100));
+        }
+        return array;
+    }
+    // Hàm tìm chỉ số có phân số lớn nhất;
+    function maxFraction(arr1, arr2) {
+        let i;
+        let max = arr1[0] / arr2[0];
+        let count;
+        for (i = 0; i < arr1.length; i++) {
+            if (arr1[i] / arr2[i] > max) {
+                max = arr1[i] / arr2[i];
+                count = i;
+            }
+        }
+        return count;
+    }
+
+    let numerators = arrayRandom(5);
+    let denominators = arrayRandom(5);
+    document.write("Mảng numerators là: "+ numerators + "<br>");
+    document.write("Mảng denominators là: "+ denominators + "<br>");
+    document.write(numerators[maxFraction(numerators,denominators)] + "/" + denominators[maxFraction(numerators,denominators)] + " là phân số lớn nhất có chỉ số là:  " + maxFraction(numerators,denominators));
+
+</script>
+</body>
+</html>

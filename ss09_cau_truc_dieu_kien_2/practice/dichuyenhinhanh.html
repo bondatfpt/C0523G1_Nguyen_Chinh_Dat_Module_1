@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển anh 7</title>
+    <style>
+        #img {
+            float: right;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<img id="anh7" src="r7.jpg" alt="Xem anh sút nè mấy cưng"  style="width: 400px">
+<img id="img" src="_MG_5413.jpg"> <br>
+<input type="button" onclick="moveRight()" value="Nhấp nhẹ thôi" id="left">
+<script>
+let a = null;
+    a = document.getElementById("anh7");
+function khoitao (){
+    let a = document.getElementById("anh7");
+    a.style.position = "relative";
+    a.style.left = "100px"
+}
+function moveRight(){
+    a.style.left = parseInt(a.style.left) + 100 + "px";
+}
+window.onload = khoitao;
+</script>
+</body>
+</html>

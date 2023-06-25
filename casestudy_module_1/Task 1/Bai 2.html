@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nguyên âm và phụ âm</title>
+</head>
+<body>
+<script>
+while (true){
+    let characters = prompt("Nhập một kí tự bất kỳ");
+    charactersLower = characters.toLowerCase();
+    switch (characters){
+        case "u":
+        case "e":
+        case "o":
+        case "a":
+        case "i":
+        alert(characters + " là nguyên âm");
+            break;
+        default:
+                alert(characters + " là phụ âm");
+    }
+}
+</script>
+</body>
+</html>

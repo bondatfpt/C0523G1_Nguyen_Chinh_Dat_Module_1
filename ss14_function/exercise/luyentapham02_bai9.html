@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkElement() {
+        let n;
+        let count = 0;
+        do {
+            n = +prompt("Nhập vào số lượng phần tử của mảng");
+            if (n <= 0) {
+                alert("Không hợp lệ, số phần tử phải lớn hơn 0 (n > 0) ");
+            }
+        }
+        while (n <= 0);
+        let i;
+        let arr = [];
+        for (i = 0; i < n; i++) {
+            arr[i] = prompt("Nhập vào phần tử thứ" + (i + 1));
+        }
+        document.write("Mảng có "+ i + " phần tử: "  + arr + "<br\>");
+        let element = prompt("mời nhập một phần tử");
+        for (let j = 0; j < arr.length; j++) {
+            if (element == arr[j]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            document.write("Phần tử " + element + " nằm trong mảng và xuất hiện " + count + " lần");
+
+        } else {
+            document.write("-1");
+        }
+    }
+    checkElement();
+</script>
+</body>
+</html>

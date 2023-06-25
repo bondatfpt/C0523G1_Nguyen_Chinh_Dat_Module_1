@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrNumbers = [0, 1, 5, 9, 10, 11, 12, 15, 16, 9];
+    let a = +prompt("Mời  nhập vào 1 số");
+    for (let i = 0; i < arrNumbers.length; i++) {
+        if (a === arrNumbers[i]) {
+            delete arrNumbers[i];
+            arrNumbers.push(0);
+        }
+    }
+    document.write(arrNumbers.join(' '));
+
+</script>
+</body>
+</html>

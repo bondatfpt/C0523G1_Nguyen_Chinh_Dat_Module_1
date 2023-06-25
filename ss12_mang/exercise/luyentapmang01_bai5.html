@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Chương trình đếm số nguyên âm. Chỉ dành cho tiếng anh.
+    let string = prompt("Nhập vào 1 chuỗi bất kỳ");
+    let vowel = "UEOAIueoai";
+    let count = 0;
+    for (let i = 0 ; i < string.length; i++ ){
+        if (vowel.indexOf(string[i])!==-1){
+            count ++;
+        }
+    }
+    document.write( "chuỗi " + string +" có " + count + " nguyên âm");
+</script>
+</body>
+</html>

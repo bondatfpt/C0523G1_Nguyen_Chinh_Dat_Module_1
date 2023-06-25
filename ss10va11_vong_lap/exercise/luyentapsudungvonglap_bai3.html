@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình hiển thị 20 số fibonacci đầu tiên</title>
+</head>
+<body>
+<script>
+  let i;
+  let f1 = 0;
+  let f2 = 1;
+  let result = 0;
+  let stt = "1: 1 <br\>"
+  for (i = 2; i <= 20; i++){
+      result = f1 + f2;
+      stt += i + ": " + result + "<br\>";
+      f1 = f2;
+      f2 = result;
+  }
+  document.write(stt);
+</script>
+
+</body>
+</html>

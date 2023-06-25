@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điện</title>
+</head>
+<body>
+<h2>Chương trình tính giá điện</h2>
+Nhập tổng số điện năng tiêu thụ <input type="number" id="n1"> <br> <br>
+<button onclick="tinhGiaDien()">Check</button>
+<script>
+    function tinhGiaDien() {
+        let a = +document.getElementById("n1").value;
+        let b;
+        if (a < 50) {
+            b = a * 1.678;
+        } else if (a < 100) {
+            b = (50 * 1678) + (a - 50) * 1734 ;
+        } else if (a < 200) {
+            b = (50 * 1678) + (50 * 1734) + (a - 100) * 2014 ;
+        } else if (a < 300) {
+            b = (50 * 1678) + ((a - 50) * 1734) + (100 * 2014) + ((a - 200) * 2536) ;
+        } else if (a < 400) {
+            b = (50 * 1678) + ((a - 50) * 1734) + (100 * 2014) + (100 * 2536) + ((a - 300) * 2834) ;
+        } else {
+            b = (50 * 1678) + ((a - 50) * 1734) + (100 * 2014) + (100 * 2536) + (100 * 2834) + ((a - 400) * 2927) ;
+        }
+        let c = b /10 ;// c  là tiền thuế giá trị gia tăng
+        let d = c +b;
+        alert("Tiền điện bạn phải đóng là:" + d + "VNĐ");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Nhập độ C <input type="number" id="m1" name="doC" ></label>
+    <button onclick="chuyenDoiNhietDo()" id="btn1">OK</button> <br> <br>
+    <label>Nhập độ F <input type="number" id="m2" name="doF" ></label>
+    <button onclick="chuyendoinhietdo()" id="btn2">OK</button>
+    <script>
+        function chuyenDoiNhietDo(){
+           let a = document.getElementById("m1").value;
+            let doF = a * 1.8 + 32;
+            alert(doF + "độ F");
+        }
+        function chuyendoinhietdo(){
+            let a = document.getElementById("m2").value;
+            let doC = (a -32)/1.8;
+            alert(doC + "độ C");
+        }
+    </script>
+</form>
+</body>
+</html>

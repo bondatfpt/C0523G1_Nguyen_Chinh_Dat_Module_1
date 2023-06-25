@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển dịch tiếng việt sang tiếng Anh</title>
+</head>
+<body>
+Nhập từ cần dịch <input type="text" id="n1">
+<button onclick="transLate()" type="button" >OK</button>
+<p id="result"></p>
+<script>
+    function transLate (){
+        let vie = ['bàn', 'ghế','con chuột','bàn phím', 'máy tính','quyển vở'];
+        let eng = ['table','chair','mouse','keyboard','computer','notebook'];
+        let a = document.getElementById("n1").value;
+        let vieI = 0;
+        let result = '';
+        for (i = 0 ; i < vie.length ; i++){
+            if (a === vie[i]){
+                vieI = i;
+            }
+            for (j = 0; j < eng.length ; j++ ){
+                if (vieI=== j){
+                    result = eng [j];
+                }
+            }
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>

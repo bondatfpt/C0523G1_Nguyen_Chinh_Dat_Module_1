@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng trực tiếp nhận được dựa trên doanh thu</title>
+</head>
+<body>
+<h2>Tính hoa hồng trực tiếp nhận được dựa trên doanh thu bán hàng</h2>
+<p>- Doanh thu từ 0 đến 10.000.000đ nhận 3% </p>
+<p> -Doanh thu từ 10.000.000đ đến 50.000.000 nhận 5%</p>
+<p>- Doanh thu trên 50.000.000đ nhận 7% </p>
+<p>- Công thức tính hoa hồng: Hoa hồng = Doanh thu * mức phần trăm hoa hồng </p>
+<input id="doanhThu" type="number" placeholder="Nhập DTBH vào đây">
+<button id="ok" onclick="tinhHoaHong()">OK</button>
+<script>
+    function tinhHoaHong () {
+        let a = +document.getElementById("doanhThu").value;
+        if(a<10000000){
+            let c = a *3 /100;
+            alert("Hoa hồng nhận được là:" + c + "VNĐ");
+        }
+        else if (a < 50000000){
+            c = a * 5 / 100;
+            alert("Hoa hồng nhận được là:" + c + "VNĐ");
+        }
+        else {
+            c = a *7 /100;
+            alert("Hoa hồng nhận được là:" + c + "VNĐ")
+        }
+    }
+</script>
+</body>
+</html>

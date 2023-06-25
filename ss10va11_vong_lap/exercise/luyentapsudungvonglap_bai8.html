@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="gameDoanSo()">Nhấp vào đi</button>
+<script>
+    function gameDoanSo() {
+        let a = +prompt("Khoảng bắt đầu");
+        let b = +prompt("Khoảng kết thúc");
+        let numberRan = Math.round(Math.random()*(b - a ) + a);
+        let i = 1;
+        do {
+            let numberCheck = +prompt("Bạn đoán số mấy?")
+            if (numberCheck > numberRan){
+                alert("Số cần đoán nhỏ hơn" + "," + "bạn còn " + (3-i) + " lần chọn" );
+            }
+            else if (numberCheck < numberRan){
+                alert("Số cần đoán lớn hơn" + "," + "bạn còn " + (3-i) + " lần chọn");
+            }
+            else {
+                alert("Chúc mừng bạn");
+                break;
+            }
+            i++;
+        }
+        while (i <=3)
+
+        }
+
+
+</script>
+</body>
+</html>

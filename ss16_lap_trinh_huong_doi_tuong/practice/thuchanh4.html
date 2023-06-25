@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô phỏng sự hoạt động của đèn pin</title>
+</head>
+<body>
+<script>
+    class Battery {
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+
+        getEnergy() {
+            return this.energy;
+        }
+
+        getDecreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp {
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        getBatteryInfor() {
+            return this.battery.getEnergy();
+        };
+
+        getLight() {
+            if (this.status) {
+                alert("Lighting");
+            }
+
+            else{
+                ("Not lighting");
+            }
+        };
+        getTurnon (){
+            this.status = true;
+        };
+        getTurnOff (){
+            this.status = false;
+        }
+    }
+
+    let batterty = new Battery();
+    batterty.setEnergy(5);
+
+    let flashLamp = new FlashLamp();
+    flashLamp.setBattery(batterty);
+
+    document.write("Battery Infor:" + flashLamp.getBatteryInfor() + "<br>");
+    flashLamp.getLight();
+
+    document.write("Turn on" +"<br/>");
+    flashLamp.getTurnon();
+    flashLamp.getLight();
+    document.write("Battery Infor: " +flashLamp.getBatteryInfor() + "<br>");
+
+    document.write("Turn off <br>");
+    flashLamp.getTurnOff();
+    flashLamp.getLight();
+
+
+</script>
+</body>
+</html>

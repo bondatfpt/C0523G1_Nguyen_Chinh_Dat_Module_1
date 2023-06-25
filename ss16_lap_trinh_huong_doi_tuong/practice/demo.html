@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+    <style>
+        td, th {
+            border: black 1px solid
+        }
+
+        table {
+            border-collapse: collapse
+        }
+    </style>
+</head>
+<body>
+<script>
+    function createArray(n){
+        let a = [];
+        for(let i = 0; i < n; i++){
+            a.push(Math.round(Math.random()*100));
+        }
+        return a;
+    }
+    let numerators = createArray(10);
+    let denominators = createArray(10);
+    let max = numerators[0] / denominators[0];
+    let index = 0;
+    for (let i = 1; i < numerators.length; i++){
+        if (max <= numerators[i] / denominators[i]){
+            max = numerators[i] / denominators[i];
+            index = i;
+        }
+    }
+    document.write("numerators list : " + numerators + "<br>");
+    document.write("denominators list : " + denominators + "<br>");
+    document.write("maxFraction : " + numerators[index] + "/" + denominators[index] + "<br>");
+    document.write("maxFraction index : " + index + "<br>");
+</script>
+</body>
+</html>

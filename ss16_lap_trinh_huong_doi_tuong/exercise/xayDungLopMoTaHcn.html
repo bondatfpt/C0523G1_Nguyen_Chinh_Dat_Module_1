@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="300px" style="border: 1px solid #333333"></canvas><br>
+
+
+<script>
+    class Rectangle {
+        constructor(width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+        getArea (){
+            return this.width * this.height;
+        }
+        getPerimeter (){
+            return (this.width + this.height) * 2;
+        }
+
+        getCreateRectangle (){
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#FF000";
+            ctx.fillRect((500 - this.width) / 2, (500 - this.height) / 2, this.width, this.height);
+        }
+
+    }
+
+    let myRectangle = new Rectangle ();
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+    myRectangle.setWidth(+prompt("Nhập chiều rộng"));
+    myRectangle.setHeight(+prompt("Nhập chiều dài"));
+    document.write("Diện tích hình chữ nhật là: " + myRectangle.getArea()+ "m²" + "<br>");
+    document.write("Chu vi hình chữ nhật là: " + myRectangle.getPerimeter()+ "m");
+    myRectangle.getCreateRectangle();
+
+
+</script>
+
+
+</body>
+</html>

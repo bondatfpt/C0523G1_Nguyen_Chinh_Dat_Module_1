@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+<script>
+
+    let Circle = function (radius) {
+        this.radius = radius;
+        this.getRadius = function () {
+            return radius;
+        }
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+    };
+    let circle = new Circle(6666);
+    let radius = circle.getRadius();
+    let area = circle.getArea();
+    document.write("Hình tròn có bán kính: " + radius + "m " + "<br\>" + "Diện tích là: " + area + "m²");
+
+
+</script>
+</body>
+</html>
