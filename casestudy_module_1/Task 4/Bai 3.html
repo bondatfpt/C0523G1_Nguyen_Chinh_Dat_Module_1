@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Đếm số kí tự chung của 2 xâu</title>
 </head>
 <body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let count = 0;
+        let string1 = s1.split();
+        let string2 = s2.split();
+        for (let i = 0; i < s1.length; i++) {
+            if (s1[i] !== s1[i - 1]) {
+                string1.push(s1[i]);
+            }
+        }
+        for (let i = 0; i < s2.length; i++) {
+            if (s2[i] !== s2[i - 1]) {
+                string2.push(s2[i]);
+            }
+        }
+        for (let index1 = 0; index1 < string1.length; index1++) {
+            for (let index2 = 0; index2 < string2.length; index2++) {
+                if (string1[index1] === string2[index2]) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 
+    let string1 = prompt("Nhập một xâu bất kỳ");
+    let string2 = prompt("Nhập một xâu bất kỳ");
+    document.write("Xâu thứ nhất là: " + string1 + "<br>");
+    document.write("Xâu thứ hai là: " + string2 + "<br>");
+    document.write("Số lượng kí tự chung giữa xâu string1 và string2 là: " + commonCharacterCount(string1, string2));
+</script>
 </body>
 </html>

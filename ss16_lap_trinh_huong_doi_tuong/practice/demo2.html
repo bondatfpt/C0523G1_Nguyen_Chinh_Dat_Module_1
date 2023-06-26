@@ -2,28 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Luyentaptaomotlophinhvuong</title>
+    <title>Menu Thức uống</title>
+
 </head>
-<br>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 0 auto 50px;
+    }
+
+    th, td {
+        border: black 1px solid;
+        text-align: center;
+    }
+
+    th {
+        background: slategray;
+    }
+</style>
 <body>
+
+<p style="text-align:center; font-size: 30px">Danh mục thức uống</p>
+<table id="products">
+    <tr>
+        <th>STT</th>
+        <th>Tên</th>
+        <th>Đơn giá (k)</th>
+        <th>Số lượng</th>
+        <th>Chọn mua</th>
+    </tr>
+</table>
+
+<p style="text-align:center; font-size: 30px">Loại thức uống đã mua</p>
+<table id="products_buy">
+    <tr>
+        <th>Tên</th>
+        <th>Số lượng</th>
+        <th>Đơn giá (k)</th>
+        <th>Thành tiền</th>
+    </tr>
+</table>
+<p id='tongtien' style="text-align:center; font-size: 20px"></p>
+
 <script>
-    // function find_longest_word(str)
-    // {
-    //     var array1 = str.match(/\w[a-z]{0,}/gi);
-    //     var result = array1[0];
-    //
-    //     for(var x = 1 ; x < array1.length ; x++)
-    //     {
-    //         if(result.length < array1[x].length)
-    //         {
-    //             result = array1[x];
-    //         }
-    //     }
-    //     return result;
-    // }
-    // document.write(find_longest_word('Webbb Developmentsaddddddd Tutddddddddddddddddddddddđ'));
+    let bangSanPham = document.getElementById('products');
+    let bangSanPhamMua = document.getElementById('products_buy');
+    let tongTienElement = document.getElementById('tongtien');
 
+    let A = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let B = [18, 20, 21, 22, 9, 15];
 
+    // Phần 1: Hiển thị thức uống
+
+    let A1 = [];//Tên
+    let B1 = [];// Số lượng
+    let C1 = []; // Đơn giá
+    let D1 = []; // Thành tiền
+
+    function hienThiThucUong() {
+
+        // Xóa các td trong bảng hiện có
+        while (bangSanPham.rows.length > 1) {
+            bangSanPham.deleteRow(1); // Xóa dòng kế dưới, trừ dòng th (tiêu đề)
+        }
+
+        for (let i = 0; i < A.length; i++) {
+            let dong = bangSanPham.insertRow(i + 1);
+            let oSTT = dong.insertCell(0);
+            let oTen = dong.insertCell(1);
+            let oDonGia = dong.insertCell(2);
+            let oSoLuong = dong.insertCell(3);
+            let oChon = dong.insertCell(4);
+            oSTT.innerHTML = i + 1;
+            oTen.innerHTML = A[i];
+            oDonGia.innerHTML = B[i];
+            oSoLuong.innerHTML = " <input value='1' type='number' id=" + i + ">" + "</input>"
+            oChon.innerHTML = " <button onclick='chonSanPham(" + i + ")'>" + "Chọn" + "</button>"
+        }
+    }
+
+    function hienThiThucUongMua() {
+        // Xóa các td trong bảng hiện có , nên dùng tbody có vẻ hay hơn.
+        while (bangSanPhamMua.rows.length > 1) {
+            bangSanPhamMua.deleteRow(1); // Xóa dòng kế dưới, trừ dòng th (tiêu đề)
+        }
+        let tongTien = 0;
+        for (let i = 0; i < A1.length; i++) {
+            let dong = bangSanPhamMua.insertRow(i + 1);
+            let oTen = dong.insertCell(0);
+            let oSoLuong = dong.insertCell(1);
+            let oDonGia = dong.insertCell(2);
+            let oThanhTien = dong.insertCell(3);
+            oTen.innerHTML = A1[i];
+            oSoLuong.innerHTML = B1[i];
+            oDonGia.innerHTML = C1[i];
+            oThanhTien.innerHTML = D1[i];
+            tongTien += D1[i];
+        }
+
+        tongTienElement.innerHTML = 'Tổng tiền thanh toán là: ' + tongTien+' k.';
+    }
+
+    function chonSanPham(i) {
+        let index = 0;
+        let soLuong = parseInt(document.getElementById(i).value);
+        let count = 0;
+        if (A1[0] == null) {
+            A1.push(A[i]);
+            C1.push(B[i]);
+            B1.push(soLuong);
+            D1.push(C1[0] * B1[0]);
+            hienThiThucUongMua();
+
+        } else if (A1[0] != null) {
+            for (let j = 0; j < A1.length; j++) {
+                if (A[i] === A1[j]) {
+                    index = j;
+                    count++;
+                }
+            }
+            if (count == 0) {
+                A1.push(A[i]);
+                C1.push(B[i]);
+                B1.push(soLuong);
+                D1.push(C1[C1.length - 1] * B1[B1.length - 1]);
+
+                hienThiThucUongMua();
+
+            } else if (count > 0) {
+                B1[index] += soLuong;
+                D1[index] = (C1[index] * B1[index]);
+                hienThiThucUongMua();
+            }
+        }
+    }
+
+    hienThiThucUong();
 
 
 </script>

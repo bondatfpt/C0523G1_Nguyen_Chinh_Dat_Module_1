@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Đếm kí tự khác nhau trong xâu</title>
 </head>
 <body>
-
+<script>
+    function differentSymbolsNaive (string){
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] !== string[i + 1]){
+                count++ ;
+            }
+            else {
+                alert("Xâu giống nhau hoàn toàn");
+                break;
+            }
+        }
+        return count;
+    }
+    let string = prompt("Nhập một xâu kí tự bất kỳ");
+    alert("Số lượng kí tự khác nhau trong xâu là: " + differentSymbolsNaive(string));
+</script>
 </body>
 </html>

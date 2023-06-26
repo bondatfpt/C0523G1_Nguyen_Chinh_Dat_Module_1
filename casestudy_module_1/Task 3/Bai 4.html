@@ -5,67 +5,126 @@
     <title>Menu thức uống</title>
 </head>
 <style>
-    table, td, th {
+    table, tr, th, td {
         border: solid 1px black;
         border-collapse: collapse;
+        text-align: center;
+        width: 500px;
     }
+
+    button {
+        width: 100px;
+    }
+
+
 </style>
 <body>
-<table>
-    <tr>
-        <th style="width:150px">Cà phê</th>
-        <th style="width:150px">Cam vắt</th>
-        <th style="width:150px">Nước ép cà rốt</th>
-        <th style="width:150px">Nước ép cà chua</th>
-        <th style="width:150px">Nước lọc</th>
-        <th style="width:150px">Nước dừa</th>
-        <th style="width:150px">Kết thúc</th>
-    </tr>
-    <tr>
-        <td>
-            <button style="width: 150px" id="1" onclick="quantityWater()">1</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="2" onclick="quantityWater()">2</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="3" onclick="quantityWater()">3</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="4" onclick="quantityWater()">4</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="5" onclick="quantityWater()">5</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="6" onclick="quantityWater()">6</button>
-        </td>
-        <td>
-            <button style="width: 150px" id="7">7</button>
-        </td>
-    </tr>
-
+<table id="menu">
+    <!--    <thead>-->
+    <!--    <tr>-->
+    <!--        <th>STT</th>-->
+    <!--        <th>Tên đồ uống</th>-->
+    <!--        <th>Giá</th>-->
+    <!--        <th>Hành động</th>-->
+    <!--    </tr>-->
+    <!--    </thead>-->
+    <!--    <tbody></tbody>-->
+    <!--    <tfoot></tfoot>-->
 </table>
-<p id="cost"></p>
 <script>
-    // Hàm nhập số lượng đồ uống;
-    function quantityWater(quantity) {
+    class Drinks {
+        constructor(id, name, price, amount) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.amount = amount;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        setAmount(amount) {
+            this.amount = amount;
+        }
+    }
+
+    let caFe = new Drinks("1", "Cà phê", "20,000 VNĐ");
+    let camVat = new Drinks("2", "Cam vắt", "30,000 VNĐ");
+    let nuocEpCaRot = new Drinks("3", "Nước ép cà rốt", "25,000 VNĐ");
+    let nuocEpCaChua = new Drinks("4", "Nước ép cà chua", "10,000 VNĐ");
+    let nuocLoc = new Drinks("5", "Nước lọc", "5,000 VNĐ");
+    let nuocDua = new Drinks("6", "Nước dừa", "40,000 VNĐ");
+
+    let listProduct = [caFe, camVat, nuocEpCaRot, nuocEpCaChua, nuocLoc, nuocDua];
+    let listCost = [20000, 30000, 25000, 10000, 5000, 40000];
+
+    function showListProduct() {
+        let textHtml = "<thead>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Tên đồ uống</th>\n" +
+            "        <th>Giá</th>\n" +
+            "        <th>Hành động</th>\n" +
+            "    </tr>\n" +
+            "    </thead>\n" +
+            "    <tbody></tbody>\n" +
+            "    <tfoot></tfoot>"
+
+        for (let index = 0; index < listProduct.length; index++) {
+            textHtml += `<tr>
+            <td>${listProduct[index].id}</td>
+            <td>${listProduct[index].name}</td>
+            <td>${listProduct[index].price}</td>
+            <td><button onclick="setAmount()">ADD</button></td>
+            </tr>`
+        }
+        textHtml += "</tbody>\n" + "</tfoot>\n"
+        "</table>"
+        document.getElementById("menu").innerHTML = textHtml;
+    }
+
+    showListProduct();
+
+    function setAmount(amount) {
         do {
-            let quantity = +prompt("Nhập số lượng bạn muốn");
-                if (quantity <= 0) {
-                    alert("Mời bạn nhập lại");
+            let amount = +prompt("Nhập số lượng bạn muốn mua");
+            if (amount <= 0 || isNaN(amount)) {
+                alert("Không hợp lệ, mời bạn nhập lại");
             }
-        }
-        while (quantity <= 0)
-    }
-
-    function waterBill() {
-            let drinks = ["Cà phê","Cam vắt","Nước ép cà rốt", "Nước ép cà chua", "Nước lọc","Nước dừa"];
-            let costShow = ["20,000 VNĐ", "25,000V NĐ", "15,000 VNĐ", "30,000 VNĐ", "10,000 VNĐ", "35,000 VNĐ"];
-        for (let i = 0; i < ; i++) {
+                for (let i = 0; i < listProduct.length; i++) {
+                    listProduct[i].setAmount(prompt(amount));
+                }
 
         }
+        while (amount <= 0 || isNaN(amount));
+
     }
+
 
 </script>
 </table>
