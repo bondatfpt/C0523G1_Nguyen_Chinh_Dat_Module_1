@@ -7,21 +7,45 @@
 <body>
 <script>
     function standardizeString(string) {
-        let arrString = string.split("");
-        let result ="";
-        let text;
-        for (let i = 0; i < arrString.length; i++) {
-            text = arrString[i].toLowerCase().trim();
-            if (text!==""){
-                text = text.substring(0,1).toUpperCase() + text.substring(1);
-                result += text + " ";
+        let result = '';
+        string = string.trim().toLowerCase();
+        let firstCharacter = true;
+        let countSpace = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === " ") {
+                countSpace++;
+                firstCharacter = true;
+            } else {
+                if (firstCharacter) {
+                    result += string[i].toUpperCase();
+                } else {
+                    result += string[i];
+                }
+                countSpace = 0;
+                firstCharacter = false;
             }
+            if (countSpace === 1) {
+                result += " ";
+            }
+
         }
         return result;
     }
-    let text = prompt("Nhap mot chuoi bat ky");
-    document.write("Chuoi chuan hoa la: " + standardizeString(text));
+    function findLongestWord (string){
+        arrString = string.split(" ");
+        max = arrString[0].length;
+        for (let i = 0; i < arrString.length; i++) {
+            if (arrString[i].length > max){
+                max = arrString[i].length;
+                return arrString[i];
+            }
+        }
 
+    }
+
+    let text = prompt("Enter a string");
+    document.write("Chuỗi đã chuẩn hóa: " + standardizeString(text) + "<br>");
+    document.write("Chữ dài nhất là: " + findLongestWord(text));
 </script>
 </body>
 </html>

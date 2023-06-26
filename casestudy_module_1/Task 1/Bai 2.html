@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kiểm tra nguyên âm và phụ âm</title>
+    <title>Kiểm tra nguyên âm</title>
 </head>
 <body>
 <script>
-    while (true) {
-        let characters = prompt("Nhập một kí tự bất kỳ");
+    let characters;
+        do{
+            characters = prompt("Nhập một kí tự bất kỳ");
+            if (isNaN(characters) === false){
+                alert("Chỉ kiểm tra kí tự là chữ cái");
+            }
+        }
+        while (isNaN(characters) === false);
         charactersLower = characters.toLowerCase();
-        switch (characters) {
+        switch (charactersLower) {
             case "u":
             case "e":
             case "o":
@@ -18,9 +24,9 @@
                 alert(characters + " là nguyên âm");
                 break;
             default:
-                alert(characters + " là phụ âm");
+                alert(characters + " không phải nguyên âm ");
         }
-    }
+
 </script>
 </body>
 </html>
