@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a62a4fb-3848-4dd1-959c-9209ab597c61" name="Changes" comment="Chinh Dat nop bai thuc hanh 13">
+      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 1/Bai 1.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 1/Bai 1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 3/Bai 4.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 3/Bai 4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 4/Bai 1.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 4/Bai 1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss16_lap_trinh_huong_doi_tuong/practice/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss16_lap_trinh_huong_doi_tuong/practice/demo2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss16_lap_trinh_huong_doi_tuong/practice/demo2.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../C0523G1_Nguyen_Chinh_Dat_Module_1\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ss04_git_html/exercise/bai tap tao CV ca nhan.txt" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2QljWH1d8IlSK77Cgm6AVF8bpdv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/C0523G1_Nguyen_Chinh_Dat_Module_1",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1" />
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1\ss13_function" />
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1\ss09_cau_truc_dieu_kien_2\exercise" />
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1\ss09_cau_truc_dieu_kien_2\practice\img" />
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1\ss09_cau_truc_dieu_kien_2\practice" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0523G1_Nguyen_Chinh_Dat_Module_1\ss10_vong_lap\exercise" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.indexx.html">
+    <configuration name="bai tap tao CV ca nhan.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0523G1_Nguyen_Chinh_Dat_Module_1/ss04_git_html/exercise/bai tap tao CV ca nhan.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="indexx.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0523G1_Nguyen_Chinh_Dat_Module_1/ss07_bien_kieudulieu_toantu/exercise/indexx.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.indexx.html" />
+        <item itemvalue="JavaScript Debug.bai tap tao CV ca nhan.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a62a4fb-3848-4dd1-959c-9209ab597c61" name="Changes" comment="" />
+      <created>1685935091541</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685935091541</updated>
+      <workItem from="1685935092578" duration="12891000" />
+      <workItem from="1685955543672" duration="5213000" />
+      <workItem from="1685972596738" duration="10808000" />
+      <workItem from="1686013611198" duration="11070000" />
+      <workItem from="1686041357279" duration="635000" />
+      <workItem from="1686059141373" duration="1562000" />
+      <workItem from="1686107350049" duration="12760000" />
+      <workItem from="1686130227586" duration="393000" />
+      <workItem from="1686145565563" duration="1829000" />
+      <workItem from="1686147970547" duration="3817000" />
+      <workItem from="1686193969578" duration="609000" />
+      <workItem from="1686194605309" duration="3036000" />
+      <workItem from="1686197715309" duration="2041000" />
+      <workItem from="1686210148147" duration="6541000" />
+      <workItem from="1686279841554" duration="1458000" />
+      <workItem from="1686281363499" duration="16168000" />
+      <workItem from="1686317472243" duration="7625000" />
+      <workItem from="1686360414082" duration="1188000" />
+      <workItem from="1686361644957" duration="9059000" />
+      <workItem from="1686374233697" duration="2076000" />
+      <workItem from="1686456492540" duration="2943000" />
+      <workItem from="1686459555066" duration="5995000" />
+      <workItem from="1686532427662" duration="2574000" />
+      <workItem from="1686539388853" duration="15600000" />
+      <workItem from="1686576784697" duration="613000" />
+      <workItem from="1686625712702" duration="15548000" />
+      <workItem from="1686705337493" duration="21004000" />
+      <workItem from="1686746860073" duration="8000" />
+      <workItem from="1686749234310" duration="114000" />
+      <workItem from="1686750549754" duration="2439000" />
+      <workItem from="1686791359018" duration="2959000" />
+      <workItem from="1686800561562" duration="15588000" />
+      <workItem from="1686835882281" duration="10917000" />
+      <workItem from="1686877910582" duration="22106000" />
+      <workItem from="1686916501669" duration="12545000" />
+      <workItem from="1686962710779" duration="18538000" />
+      <workItem from="1686995304416" duration="747000" />
+      <workItem from="1687146161623" duration="96000" />
+      <workItem from="1687708359218" duration="855000" />
+      <workItem from="1687709572972" duration="9446000" />
+    </task>
+    <task id="LOCAL-00001" summary="Chinh Dat nop bai thuc hanh 13">
+      <created>1686930302798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686930302798</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chinh Dat nop bai tap 12" />
+    <MESSAGE value="Chinh Dat nop bai thuc hanh 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chinh Dat nop bai thuc hanh 13" />
+  </component>
+</project>

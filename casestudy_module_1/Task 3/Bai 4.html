@@ -45,22 +45,30 @@
         </td>
     </tr>
 
-    <script>
-        // Hàm nhập số lượng đồ uống;
-        function quantityWater(quantity) {
-            do {
-                let quantity = +prompt("Nhập số lượng bạn muốn");
+</table>
+<p id="cost"></p>
+<script>
+    // Hàm nhập số lượng đồ uống;
+    function quantityWater(quantity) {
+        do {
+            let quantity = +prompt("Nhập số lượng bạn muốn");
                 if (quantity <= 0) {
                     alert("Mời bạn nhập lại");
-                }
             }
-            while (quantity <= 0)
         }
-        function waterBill(){
+        while (quantity <= 0)
+    }
+
+    function waterBill() {
+            let drinks = ["Cà phê","Cam vắt","Nước ép cà rốt", "Nước ép cà chua", "Nước lọc","Nước dừa"];
+            let costShow = ["20,000 VNĐ", "25,000V NĐ", "15,000 VNĐ", "30,000 VNĐ", "10,000 VNĐ", "35,000 VNĐ"];
+        for (let i = 0; i < ; i++) {
 
         }
+    }
 
-    </script>
+
+</script>
 </table>
 </body>
 </html>

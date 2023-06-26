@@ -47,14 +47,14 @@
         let taxMoney =  contractSalary * tax ;
         let realSalary = contractSalary - taxMoney;
 
-        parollTable = `<tr>
+       let paroyllTable = `<tr>
             <td>${name}</td>
             <td>${contractSalary}</td>
             <td>${taxData}</td>
             <td>${taxMoney}</td>
             <td>${realSalary}</td>
         </tr>`
-        document.getElementById("payrollTable").innerHTML  += parollTable;
+        document.getElementById("payrollTable").innerHTML  += paroyllTable;
     }
 
 </script>

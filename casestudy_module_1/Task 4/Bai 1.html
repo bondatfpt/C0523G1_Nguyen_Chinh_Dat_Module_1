@@ -2,10 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chuẩn hóa kí tự</title>
 </head>
 <body>
 <script>
+    function standardizeString(string) {
+        let arrString = string.split("");
+        let result ="";
+        let text;
+        for (let i = 0; i < arrString.length; i++) {
+            text = arrString[i].toLowerCase().trim();
+            if (text!==""){
+                text = text.substring(0,1).toUpperCase() + text.substring(1);
+                result += text + " ";
+            }
+        }
+        return result;
+    }
+    let text = prompt("Nhap mot chuoi bat ky");
+    document.write("Chuoi chuan hoa la: " + standardizeString(text));
 
 </script>
 </body>
