@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tính tổng các số chẵn trong ma trận</title>
 </head>
 <body>
 <script>
-    for (let i = 0; i < 100; i++) {
-        console.log("*");
+    let row;
+    let col;
+do{
+    row = +prompt("Nhập số hàng của ma trận");
+    col = +prompt("Nhập số cột của ma trận");
+    if(row !== col || row <= 0 || col <=0 || isNaN(row) || isNaN(col)){
+        alert("Không hợp lệ. Chú ý: Một ma trận phải có chiều dài và chiều rộng bằng nhau");
     }
+
+}
+while(row !== col || row <= 0 || col <=0 || isNaN(row)|| isNaN(col));
+function sumOfEvenNumberMatrix (array2D){
+    let sum = 0;
+    for (row = 0; row <array2D.length ; row++) {
+        array2D[row] = [];
+        for (let col = 0; col <= row ; col++) {
+            array2D[row][col] = +prompt("Nhập vào phần tử thứ " + array2D[row][col]);
+            }
+        }
+    return array2D;
+    }
+    let array2D = +prompt("dasd");
+
+     document.write(  sumOfEvenNumberMatrix(array2D));
+
+
 </script>
 </body>
 </html>

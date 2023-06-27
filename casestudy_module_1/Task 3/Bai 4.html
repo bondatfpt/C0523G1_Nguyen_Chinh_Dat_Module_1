@@ -2,131 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Menu thức uống</title>
+    <title>Title</title>
 </head>
-<style>
-    table, tr, th, td {
-        border: solid 1px black;
-        border-collapse: collapse;
-        text-align: center;
-        width: 500px;
-    }
-
-    button {
-        width: 100px;
-    }
-
-
-</style>
 <body>
-<table id="menu">
-    <!--    <thead>-->
-    <!--    <tr>-->
-    <!--        <th>STT</th>-->
-    <!--        <th>Tên đồ uống</th>-->
-    <!--        <th>Giá</th>-->
-    <!--        <th>Hành động</th>-->
-    <!--    </tr>-->
-    <!--    </thead>-->
-    <!--    <tbody></tbody>-->
-    <!--    <tfoot></tfoot>-->
-</table>
 <script>
-    class Drinks {
-        constructor(id, name, price, amount) {
-            this.id = id;
-            this.name = name;
-            this.price = price;
-            this.amount = amount;
+    let listDrink;
+    let drinks = ["Cà Phê(20,000 VNĐ)", "Cam vắt(25,000 VNĐ)", "Nước ép cà rốt(15,000 VNĐ)", "Nước ép cà chua(20,000VNĐ)", "Nước lọc(10,000 VNĐ)", "Nước dừa(20,000 VNĐ)"];
+    let sum = 0;
+    do {
+        listDrink = +prompt("Menu nước: \n 1.Cà phê \n 2.Cam vắt \n 3.Nước ép cà rốt \n 4.Nước ép cà chua \n 5.Nước lọc \n 6.Nước dừa \n 7.Kết thúc");
+        let quantity = 0;
+        if (listDrink === 7) {
+            alert("Bạn có chắc chắn muốn dừng gọi món?");
         }
 
-        getId() {
-            return this.id;
-        }
+        switch (listDrink){
+            case 1:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[0]}`);
+                sum += quantity * 20000;
+                break;
+            case 2:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[1]}`);
+                sum += quantity * 25000;
+                break;
+            case 3:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[2]}`);
+                sum += quantity * 15000;
+                break;
+            case 4:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[3]}`);
+                sum += quantity * 20000;
+                break;
+            case 5:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[4]}`);
+                sum += quantity * 10000;
+                break;
+            case 6:
+                quantity = + prompt(`Bạn muốn mua bao nhiêu ly ${drinks[5]}`);
+                sum += quantity * 20000;
+                break;
 
-        getName() {
-            return this.name;
-        }
-
-        getPrice() {
-            return this.price;
-        }
-
-        getAmount() {
-            return this.amount;
-        }
-
-        setId(id) {
-            this.id = id;
-        }
-
-        setName(name) {
-            this.name = name;
-        }
-
-        setPrice(price) {
-            this.price = price;
-        }
-
-        setAmount(amount) {
-            this.amount = amount;
         }
     }
-
-    let caFe = new Drinks("1", "Cà phê", "20,000 VNĐ");
-    let camVat = new Drinks("2", "Cam vắt", "30,000 VNĐ");
-    let nuocEpCaRot = new Drinks("3", "Nước ép cà rốt", "25,000 VNĐ");
-    let nuocEpCaChua = new Drinks("4", "Nước ép cà chua", "10,000 VNĐ");
-    let nuocLoc = new Drinks("5", "Nước lọc", "5,000 VNĐ");
-    let nuocDua = new Drinks("6", "Nước dừa", "40,000 VNĐ");
-
-    let listProduct = [caFe, camVat, nuocEpCaRot, nuocEpCaChua, nuocLoc, nuocDua];
-    let listCost = [20000, 30000, 25000, 10000, 5000, 40000];
-
-    function showListProduct() {
-        let textHtml = "<thead>\n" +
-            "    <tr>\n" +
-            "        <th>STT</th>\n" +
-            "        <th>Tên đồ uống</th>\n" +
-            "        <th>Giá</th>\n" +
-            "        <th>Hành động</th>\n" +
-            "    </tr>\n" +
-            "    </thead>\n" +
-            "    <tbody></tbody>\n" +
-            "    <tfoot></tfoot>"
-
-        for (let index = 0; index < listProduct.length; index++) {
-            textHtml += `<tr>
-            <td>${listProduct[index].id}</td>
-            <td>${listProduct[index].name}</td>
-            <td>${listProduct[index].price}</td>
-            <td><button onclick="setAmount()">ADD</button></td>
-            </tr>`
-        }
-        textHtml += "</tbody>\n" + "</tfoot>\n"
-        "</table>"
-        document.getElementById("menu").innerHTML = textHtml;
+    while (listDrink !==7 );
+    if (sum > 0){
+        alert("Tổng số tiền bạn cần thanh toán là: " + sum + " VNĐ" + "\n" + "Cảm ơn quý khách");
     }
-
-    showListProduct();
-
-    function setAmount(amount) {
-        do {
-            let amount = +prompt("Nhập số lượng bạn muốn mua");
-            if (amount <= 0 || isNaN(amount)) {
-                alert("Không hợp lệ, mời bạn nhập lại");
-            }
-                for (let i = 0; i < listProduct.length; i++) {
-                    listProduct[i].setAmount(prompt(amount));
-                }
-
-        }
-        while (amount <= 0 || isNaN(amount));
-
-    }
-
-
 </script>
-</table>
 </body>
 </html>
