@@ -11,27 +11,39 @@
 do{
     row = +prompt("Nhập số hàng của ma trận");
     col = +prompt("Nhập số cột của ma trận");
-    if(row !== col || row <= 0 || col <=0 || isNaN(row) || isNaN(col)){
-        alert("Không hợp lệ. Chú ý: Một ma trận phải có chiều dài và chiều rộng bằng nhau");
+    if( row <= 0 || col <=0 || isNaN(row) || isNaN(col)){
+        alert("Không hợp lệ");
     }
 
 }
-while(row !== col || row <= 0 || col <=0 || isNaN(row)|| isNaN(col));
-function sumOfEvenNumberMatrix (array2D){
-    let sum = 0;
-    for (row = 0; row <array2D.length ; row++) {
-        array2D[row] = [];
-        for (let col = 0; col <= row ; col++) {
-            array2D[row][col] = +prompt("Nhập vào phần tử thứ " + array2D[row][col]);
+while(row <= 0 || col <=0 || isNaN(row)|| isNaN(col));
+    let arr = [];
+    for (let indexRow = 0; indexRow < row ; indexRow++) {
+             arr[indexRow] = [];
+        for (let indexCol = 0; indexCol < col ; indexCol++) {
+            arr[indexRow][indexCol] = +prompt(`Nhập phần tử hàng ${indexRow} cột ${indexCol}`);
+        }
+    }
+
+    function sumOfEvenNumber (arr){
+        let sum = 0;
+        for (let indexRow = 0; indexRow < arr.length ; indexRow++) {
+            for (let indexCol = 0; indexCol < arr.length ; indexCol++) {
+                if (arr[indexRow][indexCol] % 2 === 0){
+                    sum += arr[indexRow][indexCol];
+                }
             }
         }
-    return array2D;
+        return sum;
     }
-    let array2D = +prompt("dasd");
-
-     document.write(  sumOfEvenNumberMatrix(array2D));
-
-
+    document.write("Mảng là: " + "<br>");
+    for (let index = 0; index < arr.length ; index++) {
+        for (let index1 = 0; index1 < arr.length ; index1++) {
+            document.write(arr[index][index1] + ",");
+        }
+        document.write("<br>");
+    }
+    document.write(`Tổng các số chẵn trong ma trận là: ${sumOfEvenNumber(arr)}`);
 </script>
 </body>
 </html>
