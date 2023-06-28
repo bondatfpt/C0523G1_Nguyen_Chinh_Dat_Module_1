@@ -1,0 +1,59 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.formStudent, div.listStudent {
+    width: 550px;
+    border: 1px solid #ccc;
+    margin: 25px;
+    float: left;
+}
+
+h3 {
+    padding: 0px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+div.formStudent label {
+    width: 150px;
+    float: left;
+}
+
+div.formStudent input {
+    margin-top: 10px;
+    width: 200px;
+    padding: 5px;
+}
+
+div.formStudent button {
+    margin-left: 150px;
+    width: 200px;
+    padding: 5px;
+}
+ table.tr,th,td  {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+     width: 90px;
+
+}
+div.listStudent {
+    width: 800px;
+}
+#errorEmail{
+    color: red;
+}
+#errorClass{
+    color: red;
+}
+#errorModule{
+    color: red;
+}
+#errorDate{
+    color: red;
+}
+#errorName{
+    color: red;
+}
+
