@@ -35,10 +35,8 @@
 
     // Hàm tìm ra chữ dài nhất trong chuỗi;
     function findLongestWord (string){
-        // Tách chuỗi theo khoảng trống, vì các chữ cách nhau bởi khoảng trống
-        arrString = string.split(" ");
-        // cho max  = chữ đầu tiên;
-        max = arrString[0].length;
+        arrString = string.split(" ");  // Tách chuỗi theo khoảng trống, vì các chữ cách nhau bởi khoảng trống
+        max = arrString[0].length;       // cho max  = chữ đầu tiên;
         for (let i = 0; i < arrString.length; i++) {   // lặp từ 0 đến arrString.length -1
             if (arrString[i].length > max){    // Nếu độ dài của phần tử có index i dài hơn max thì max = arrString [i];
                 max = arrString[i].length;
