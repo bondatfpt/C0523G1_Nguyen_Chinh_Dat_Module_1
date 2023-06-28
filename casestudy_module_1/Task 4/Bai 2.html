@@ -7,20 +7,23 @@
 <body>
 <script>
     function differentSymbolsNaive (string){
-        let count = 0;
-        for (let i = 0; i < string.length; i++) {
-            if (string[i] !== string[i + 1]){
-                count++ ;
+        let arrString = string.split("");
+        for (let i = 0; i < arrString.length; i++) {
+            if (arrString[i] !== arrString[i + 1]){
+                arrString.push(arrString[i]);
+
+                // arrString.splice(i,1);
             }
             else {
                 alert("Xâu giống nhau hoàn toàn");
                 break;
             }
+            i--;
         }
-        return count;
+        return arrString;
     }
     let string = prompt("Nhập một xâu kí tự bất kỳ");
-    alert("Số lượng kí tự khác nhau trong xâu là: " + differentSymbolsNaive(string));
+    alert("Số lượng kí tự khác nhau trong xâu là: " + differentSymbolsNaive(string).length);
 </script>
 </body>
 </html>

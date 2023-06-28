@@ -6,20 +6,23 @@
 </head>
 <body>
 <script>
+    // Hàm đếm kí tự chung của 2 xâu;
     function commonCharacterCount(s1, s2) {
         let count = 0;
-        let string1 = s1.split();
-        let string2 = s2.split();
+        let string1 = s1.split();    // tách xâu s1 ra thành các kí tự cho vào mảng string1
+        let string2 = s2.split(); // tách xâu s2 ra thành các kí tự cho vào mảng string2
+
         for (let i = 0; i < s1.length; i++) {
-            if (s1[i] !== s1[i - 1]) {
-                string1.push(s1[i]);
+            if (s1[i] !== s1[i - 1]) {      // lặp từ 0 đến độ dài của string1 trừ đi 1;
+                string1.push(s1[i]);        // nếu kí từ 0 khác với  0+ 1 thì đẩy kí tự đó vào mảng string1; lặp đến hết xâu;
             }
         }
         for (let i = 0; i < s2.length; i++) {
-            if (s2[i] !== s2[i - 1]) {
+            if (s2[i] !== s2[i - 1]) {         // tương tự như trên string1;
                 string2.push(s2[i]);
             }
         }
+        // Có 2 mảng, mỗi mảng đều chứa các kí tự không giống nhau của 2 xâu; ta cho 2 vòng for lồng nhau tìm phần tử khác nhau rồi tăng biến đếm lên;
         for (let index1 = 0; index1 < string1.length; index1++) {
             for (let index2 = 0; index2 < string2.length; index2++) {
                 if (string1[index1] === string2[index2]) {

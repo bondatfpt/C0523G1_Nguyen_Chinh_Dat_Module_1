@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<script>
+  let n;
+  do {
+    n = +prompt("Nhập số lượng phần tử của mảng");
+    if ( n <= 0 || isNaN(n)){
+      alert("Không hợp lệ");
+    }
+  }
+  while(n <= 0 || isNaN(n));
+  let array = [];
+  for (let index = 0; index < n ; index++) {
+    array[index] = +prompt("Nhập vào phần tử thứ " + (index +1));
+  }
+  let count = 0;
+  for (let i = 0; i < array.length ; i++) {
+    if (array[i] % 2 === 0){
+      count++;
+    }
+  }
+  if (array.length - count !== count){
+    alert("NO");
+  }
+  else {
+    alert("YES");
+  }
+</script>
+</body>
+</html>

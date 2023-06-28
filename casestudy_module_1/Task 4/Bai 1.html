@@ -6,38 +6,43 @@
 </head>
 <body>
 <script>
+   // Hàm chuẩn hóa string
     function standardizeString(string) {
-        let result = '';
-        string = string.trim().toLowerCase();
-        let firstCharacter = true;
-        let countSpace = 0;
-        for (let i = 0; i < string.length; i++) {
-            if (string[i] === " ") {
+        let result = '';    // khai báo kết quả in ra màn hình là 1 chuỗi rỗng;
+        string = string.trim().toLowerCase();   // bỏ khoảng trống 2 đầu chuỗi, chuyển về chữ thường;
+        let firstCharacter = true;            // khai báo kí tự đầu tiên của mỗi chữ là true;
+        let countSpace = 0;                   // khai báo biến đếm khoảng trống bằng 0;
+        for (let i = 0; i < string.length; i++) {      // cho vòng lặp chạy từ 0 đến string.length -1;
+            if (string[i] === " ") {         // Nếu 1 kí tự trong chuỗi là khoảng trống, countSpace tăng lên 1;
                 countSpace++;
-                firstCharacter = true;
+                firstCharacter = true;       // khi result cộng dồn 1 khoảng trống, thì tiếp theo sẽ là 1 từ, reset lại firstCharacter = true để nó viết hoa;
             } else {
                 if (firstCharacter) {
-                    result += string[i].toUpperCase();
+                    result += string[i].toUpperCase();    // Nếu không phải là khoảng trống, thì sẽ là 1 từ, kí tự đầu tiên đúng thì sẽ viết hoa;
                 } else {
-                    result += string[i];
+                    result += string[i];   // Không phải kí tự đầu tiên thì result sẽ cộng dồn với các string[i];
                 }
-                countSpace = 0;
-                firstCharacter = false;
+                countSpace = 0;             // reset lai biến đếm khoảng trống bằng 0; để khi countSpace ===1; result += " ";
+                firstCharacter = false;     // cho firstCharacter bằng false để nó không viết hoa các chữ còn lại
             }
-            if (countSpace === 1) {
+            if (countSpace === 1) {          // cứ countSpace =0 thì cộng vào result 1 khoảng trống;
                 result += " ";
             }
 
         }
         return result;
     }
+
+    // Hàm tìm ra chữ dài nhất trong chuỗi;
     function findLongestWord (string){
+        // Tách chuỗi theo khoảng trống, vì các chữ cách nhau bởi khoảng trống
         arrString = string.split(" ");
+        // cho max  = chữ đầu tiên;
         max = arrString[0].length;
-        for (let i = 0; i < arrString.length; i++) {
-            if (arrString[i].length > max){
+        for (let i = 0; i < arrString.length; i++) {   // lặp từ 0 đến arrString.length -1
+            if (arrString[i].length > max){    // Nếu độ dài của phần tử có index i dài hơn max thì max = arrString [i];
                 max = arrString[i].length;
-                return arrString[i];
+                return arrString[i];        // trả về chữ đó luôn, đề bài yêu cầu lấy chữ ko lấy độ dài;
             }
         }
 

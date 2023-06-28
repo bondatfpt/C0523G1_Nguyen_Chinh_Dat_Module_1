@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let quantity;
+    do {
+        quantity = +prompt("Nhập số lượng các phần tử mảng");
+        if(quantity <=0 || quantity % 2 !== 0 || isNaN(quantity)){
+            alert("Không hợp lệ, xin nhập lại");
+        }
+    }
+    while (quantity <=0 || quantity % 2 !== 0 || isNaN(quantity));
+    let array = [];
+    for (let i = 0; i < quantity; i++) {
+        array[i] = +prompt("Nhập vào phần tử thứ: " + (i+1));
+    }
+    function checkArray(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length / 2; i++) {
+            if (Math.pow(arr[i], 2) === arr[arr.length/2 +i]) {
+                count++;
+            }
+        }
+        if (count === arr.length/2){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    document.write(checkArray(array));
+
+</script>
+</body>
+</html>

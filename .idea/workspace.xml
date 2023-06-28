@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a62a4fb-3848-4dd1-959c-9209ab597c61" name="Changes" comment="Chinh Dat nop bai thuc hanh 13">
-      <change afterPath="$PROJECT_DIR$/casestudy_module_1/Task 6/XayDungHeThongQuanLySinhVien/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/casestudy_module_1/Task 6/XayDungHeThongQuanLySinhVien/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LuyenTap/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LuyenTap/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LuyenTap/Bai3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 6/XayDungHTQLHVCodeGym.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 6/XayDungHeThongQuanLySinhVien/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss16_lap_trinh_huong_doi_tuong/practice/demo2.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss16_lap_trinh_huong_doi_tuong/practice/demo2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 3/Bai 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 3/Bai 2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_module_1/Task 7/XayDungGiaoDien.html" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_module_1/Task 7/XayDungGiaoDien.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -136,7 +137,7 @@
       <workItem from="1687708359218" duration="855000" />
       <workItem from="1687709572972" duration="24351000" />
       <workItem from="1687780526095" duration="30223000" />
-      <workItem from="1687871021185" duration="20147000" />
+      <workItem from="1687871021185" duration="27081000" />
     </task>
     <task id="LOCAL-00001" summary="Chinh Dat nop bai thuc hanh 13">
       <created>1686930302798</created>

@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+
+    // Phần đầu cho người dùng nhập phần tử vào mảng tương tự ba task5/1.
     let row;
     let col;
     let indexRow = 0;
@@ -14,11 +16,11 @@
     do {
         row = +prompt("Nhập số hàng của mảng");
         col = +prompt("Nhập số cột của mảng");
-        if ( row <= 0 || col <= 0 || isNaN(row) || isNaN(col)){
+        if ( row <= 0 || col <= 0 || row % 1 !== 0 || col % 1 !==0|| isNaN(row) || isNaN(col)){
             alert("Không hợp lệ, mời nhập lại");
         }
     }
-    while (row <= 0 || col <= 0 || isNaN(row) || isNaN(col));
+    while (row <= 0 || col <= 0 || row % 1 !== 0|| col % 1 !== 0 || isNaN(row) || isNaN(col));
 
     for (indexRow = 0; indexRow < row ; indexRow++) {
         array[indexRow] = [];
@@ -26,7 +28,9 @@
             array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
         }
     }
+
     document.write("Mảng là: " + "<br>");
+
     for ( indexRow = 0; indexRow < array.length ; indexRow++) {
         for ( indexCol = 0; indexCol < array.length ; indexCol++) {
             document.write(array[indexRow][indexCol] + ",");
@@ -35,23 +39,18 @@
     }
 
     function isPrime (array){
-        let count = 0;
-        let listPrime = [];
-        for (indexRow = 0; indexRow < array.length; indexRow++) {
-            for (indexCol = 0; indexCol < array.length; indexCol++) {
-                for (let div = 2; div < array[indexRow][indexCol] ; div++) {
-                    if (array[indexRow][indexCol] % div === 0){
-                            count++;
-                    }
-                }
-                if (count === 0){
-                    listPrime.push(array[indexRow][indexCol]);
+        let countSnt = 0;
+        for (let indexRow = 0; countSnt < array.length ; indexRow++) {
+            let count = 0;
+            for (let indexCol = 2; indexCol <= indexRow ; indexCol++) {
+                if (indexRow % indexCol === 0){
+                    count++;
                 }
             }
         }
-        return listPrime;
+        return countSnt;
     }
-    document.write(`Mảng có ${isPrime(array).length} số nguyên tố, đó là: ${isPrime(array)}`);
+     document.write(" Mảng có: " + isPrime(array) + "số nguyên tố");
 </script>
 </body>
 </html>

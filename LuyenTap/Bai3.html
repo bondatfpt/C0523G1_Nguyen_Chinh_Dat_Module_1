@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n;
+  do{
+    n = +prompt("Nhập số lượng phần tử của mảng");
+    if (n <= 0 || isNaN(n)){
+      alert("Không hợp lệ, mời nhập lại");
+    }
+  }
+  while (n <= 0 || isNaN(n));
+  let arr = [];
+  for (let i = 0; i < n ; i++) {
+    arr[i] = +prompt("Nhập vào phần tử thứ: " + (i+1));
+  }
+  document.write(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < arr[i+1] || arr[i] > arr[i +1] ){
+      alert("OK");
+      break;
+    }
+    else {
+      alert("No");
+      break;
+    }
+  }
+</script>
+</body>
+</html>

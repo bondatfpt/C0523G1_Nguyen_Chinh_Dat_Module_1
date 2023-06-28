@@ -58,6 +58,10 @@
         }
     }
 
+    // Sắp xếp mảng theo thứ tự giảm dần, tăng dần sẽ là  missingValue1.sort((a,b)=>a+b);
+    missingValue1.sort((a,b)=>b-a);
+
+    // In ra màn hình kết quả;
     document.write("ArrNumber : " + arrNumber + "<br>");
     document.write("ArrNumber1 : "  + arrNumber1 + "<br>");
     document.write("MissingValue: " + missingValue + "<br>");
