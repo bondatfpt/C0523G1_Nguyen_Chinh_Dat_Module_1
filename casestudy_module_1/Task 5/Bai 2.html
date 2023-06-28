@@ -16,41 +16,46 @@
     do {
         row = +prompt("Nhập số hàng của mảng");
         col = +prompt("Nhập số cột của mảng");
-        if ( row <= 0 || col <= 0 || row % 1 !== 0 || col % 1 !==0|| isNaN(row) || isNaN(col)){
+        if (row <= 0 || col <= 0 || row % 1 !== 0 || col % 1 !== 0 || isNaN(row) || isNaN(col)) {
             alert("Không hợp lệ, mời nhập lại");
         }
     }
-    while (row <= 0 || col <= 0 || row % 1 !== 0|| col % 1 !== 0 || isNaN(row) || isNaN(col));
+    while (row <= 0 || col <= 0 || row % 1 !== 0 || col % 1 !== 0 || isNaN(row) || isNaN(col));
 
-    for (indexRow = 0; indexRow < row ; indexRow++) {
+    for (indexRow = 0; indexRow < row; indexRow++) {
         array[indexRow] = [];
-        for ( indexCol = 0; indexCol < col ; indexCol++) {
+        for (indexCol = 0; indexCol < col; indexCol++) {
             array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
         }
     }
 
     document.write("Mảng là: " + "<br>");
 
-    for ( indexRow = 0; indexRow < array.length ; indexRow++) {
-        for ( indexCol = 0; indexCol < array.length ; indexCol++) {
+    for (indexRow = 0; indexRow < array.length; indexRow++) {
+        for (indexCol = 0; indexCol < array[indexRow].length; indexCol++) {
             document.write(array[indexRow][indexCol] + ",");
         }
         document.write("<br>");
     }
 
-    function isPrime (array){
-        let countSnt = 0;
-        for (let indexRow = 0; countSnt < array.length ; indexRow++) {
-            let count = 0;
-            for (let indexCol = 2; indexCol <= indexRow ; indexCol++) {
-                if (indexRow % indexCol === 0){
-                    count++;
+    // Hàm trả về 1 mảng các SNT tìm được trong một mảng 2 chiều;
+    function findAndCountPrime (array){
+        let arrPrime = [];
+        for (let indexRow = 0; indexRow < array.length; indexRow++) {
+            for (let indexCol = 0; indexCol < array[indexRow].length; indexCol++) {
+                let count = 0;
+                for (let k = 2; k < array[indexRow][indexCol]/2 ; k++) {
+                    if (array[indexRow][indexCol] % k ===0 )
+                        count ++;
+                }
+                if (count === 0){
+                    arrPrime.push(array[indexRow][indexCol]);
                 }
             }
         }
-        return countSnt;
+        return arrPrime;
     }
-     document.write(" Mảng có: " + isPrime(array) + "số nguyên tố");
+    document.write(`Mảng có ${findAndCountPrime(array).length} số nguyên tố, đó là : ${findAndCountPrime(array)}`);
 </script>
 </body>
 </html>

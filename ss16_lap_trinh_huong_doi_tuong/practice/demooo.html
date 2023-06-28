@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m;
+    let n;
+    let arr = [];
+    let sum = 0;
+    do {
+        m = +prompt("Enter row:");
+        if (m <= 0 || isNaN(m)) {
+            alert('Row must be greater than 0. Please enter again!');
+        }
+    } while (m <= 0 || isNaN(m));
+
+    do {
+        n = +prompt("Enter column:");
+        if (n <= 0) {
+            alert('Column must be greater than 0. Please enter again!');
+        }
+    } while (n <= 0 || isNaN(n));
+
+    addArray(m,n);
+    showArray(arr);
+    document.write('<br>Prime: ');
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (checkPrime(arr[i][j])) {
+                document.write(arr[i][j]+', ');
+                count++;
+            }
+        }
+    }
+    document.write('<br>There are '+count+' primes in the array.');
+
+    function addArray(m,n){
+        for (let i = 0; i < m; i++) {
+            arr[i]=[];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt(`arr[${i}][${j}] = `);
+            }
+        }
+    }
+
+    function showArray(arr){
+        document.write('Array entered:<br>');
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i].join(' '));
+            document.write('<br>');
+        }
+    }
+
+    function checkPrime(number){
+        if(number<2){
+            return false;
+        } else {
+            for (let i=2;i<=number/2;i++){
+                if (number%i===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

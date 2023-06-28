@@ -15,7 +15,7 @@
         for (let i = 0; i < string.length; i++) {      // cho vòng lặp chạy từ 0 đến string.length -1;
             if (string[i] === " ") {         // Nếu 1 kí tự trong chuỗi là khoảng trống, countSpace tăng lên 1;
                 countSpace++;
-                firstCharacter = true;       // khi result cộng dồn 1 khoảng trống, thì tiếp theo sẽ là 1 từ, reset lại firstCharacter = true để nó viết hoa;
+                firstCharacter = true;       // khi result cộng dồn 1 khoảng trống, thì tiếp theo sẽ là 1 từ, reset lại firstCharacter = true để câu lệnh if ở dưới  viết hoa;
             } else {
                 if (firstCharacter) {
                     result += string[i].toUpperCase();    // Nếu không phải là khoảng trống, thì sẽ là 1 từ, kí tự đầu tiên đúng thì sẽ viết hoa;

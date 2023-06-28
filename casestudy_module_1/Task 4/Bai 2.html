@@ -9,16 +9,13 @@
     function differentSymbolsNaive (string){
         let arrString = string.split("");
         for (let i = 0; i < arrString.length; i++) {
-            if (arrString[i] !== arrString[i + 1]){
+            if (arrString[i] !== arrString[i - 1]){
                 arrString.push(arrString[i]);
-
-                // arrString.splice(i,1);
             }
             else {
                 alert("Xâu giống nhau hoàn toàn");
                 break;
             }
-            i--;
         }
         return arrString;
     }
