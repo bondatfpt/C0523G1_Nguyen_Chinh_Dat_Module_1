@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table,tr,th,td {
+        border: 1px solid #cccccc;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<table id="danhSach" >
+
+</table>
+<script>
+  class Maytinh {
+    constructor(maMay,tenMay,tenHang,giaBan) {
+      this.maMay = maMay;
+      this.tenMay = tenMay;
+      this.tenHang = tenHang;
+      this.giaBan = giaBan;
+    }
+    getMaMay (){
+      return this.maMay;
+    }
+    getTenMay (){
+      return this.tenMay;
+    }
+    getTenHang (){
+      return this.tenHang;
+    }
+    getGiaBan (){
+      return this.giaBan;
+    }
+    setMaMay (maMay){
+      this.maMay = maMay;
+    }
+    setTenMay (tenMay){
+      this.tenMay = tenMay;
+    }
+    setTenHang (tenHang){
+      this.tenHang = tenHang;
+    }
+    setGiaBan (giaBan){
+      this.giaBan = giaBan;
+    }
+    toString(){
+      return `Mã máy: ${this.getMaMay()} <br> Tên máy: ${this.getTenMay()} <br> Tên hãng: ${this.getTenHang()} <br> Giá Bán: ${this.getGiaBan()}`
+    }
+  }
+
+  let mayTinh = new Maytinh("1","Dell5568","Dell",10000000);
+  let mayTinh1 = new Maytinh("2","Dell5569","Dell",15000000);
+  let mayTinh2 = new Maytinh("2","Dell5569","Dell",25000000);
+  document.write(mayTinh2.toString());
+
+  let danhSachMayTinh = [];
+  danhSachMayTinh.push(mayTinh1,mayTinh,mayTinh2);
+  let bangDanhSach = "";
+  bangDanhSach = `<tr>
+        <th>Mã máy</th>
+        <th>Tên máy</th>
+        <th>Tên hãng</th>
+        <th> Giá Bán</th>
+    </tr>`;
+
+  for (let index = 0; index < danhSachMayTinh.length ; index++) {
+      bangDanhSach += `<tr>
+        <td>${danhSachMayTinh[index].maMay}</td>
+        <td>${danhSachMayTinh[index].tenMay}</td>
+        <td>${danhSachMayTinh[index].tenHang}</td>
+        <td> ${danhSachMayTinh[index].giaBan}</td>
+    </tr>`
+  }
+  document. getElementById("danhSach").innerHTML = bangDanhSach;
+
+
+
+
+
+</script>
+</body>
+</html>

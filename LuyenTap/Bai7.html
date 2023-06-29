@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập vào số lượng phần tử của mảng");
+        if (n <= 0 || isNaN(n) || n % 1 !== 0) {
+            alert("Không hợp lệ, mời nhập lại");
+        }
+    }
+    while (n <= 0 || isNaN(n) || n % 1 !== 0);
+
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        do {
+            array[i] = +prompt("Nhập vào giá trị phần tử thứ: " + (i + 1));
+            if (array[i] <= 10 || array[i] >= 100 || isNaN(array[i]) || array[i] % 1 !== 0) {
+                alert("Không hợp lệ, giá trị của phần tử phải là số nguyên lớn hơn 10, bé hơn 100");
+            }
+        }
+        while (array[i] <= 10 || array[i] >= 100 || isNaN(array[i]) || array[i] % 1 !== 0);
+    }
+
+    document.write(array + "<br>");
+
+    for (let i = 0; i < array.length; i++) {
+        if (((array[i] - (array[i] % 10)) /10) < array[i] % 10) {
+            document.write(array[i]);
+        }
+    }
+
+</script>
+</body>
+</html>

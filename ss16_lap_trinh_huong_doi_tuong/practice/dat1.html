@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n;
+  do {
+    n = +prompt("Nhập vào số lượng phần tử của mảng");
+    if( n <=0 || n >50 || isNaN(n) || n % 1 !== 0){
+      alert("Không hợp lệ, mời nhập lại, số lượng phần tử là số nguyên bé hơn hoặc bằng 50")
+    }
+  }
+  while (n <=0 || n >50 || isNaN(n) || n % 1 !== 0);
+
+  let array = [];
+  for (let index = 0; index <= n ; index++) {
+    do {
+      array[index] = +prompt("Nhập vào giá trị của phần tử thứ: " + (index+ 1));
+      if (array[index] % 1 !== 0 || isNaN(array[index])){
+        alert("Không hợp lệ, giá trị phần tử phải là 1 số nguyên");
+      }
+    }
+    while (array[index] % 1 !== 0 || isNaN(array[index]));
+  }
+
+  let arr = [];
+  document.write( "Mảng là: " + array + "<br>");
+  for (let i = 0; i < array.length; i+=3) {
+    if (array[i] % 5 === 0){
+    arr.push(array[i]);
+    }
+  }
+  document.write("Những phần tử ở vị trí chia hết cho 3 và có giá trị chia hết cho 5 là: " + arr);
+</script>
+</body>
+</html>

@@ -7,8 +7,7 @@
 <body>
 <script>
     function checkString(string) {
-        let string1 = string.toLowerCase();
-        let arrString = string1.split("");
+        let arrString = string.split("");
         let result = [];
         for (let i = 0; i < arrString.length; i++) {
             switch (arrString[i]) {
@@ -17,6 +16,11 @@
                 case "o":
                 case "a":
                 case "i":
+                case "U":
+                case "E":
+                case "O":
+                case "A":
+                case "I":
                     result.push(arrString[i]);
                     break;
             }
@@ -35,7 +39,7 @@
         return result;
     }
 
-    let string = " length tow arcade index";
+    let string = " length tow arcade index UUEE OO AA II";
     document.write(checkString(string) + "<br>")
     document.write(removeSamecharacter(checkString(string)));
 </script>
