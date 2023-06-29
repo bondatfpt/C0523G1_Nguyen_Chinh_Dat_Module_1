@@ -7,61 +7,67 @@
 <body>
 <script>
 
- let row;
- let col;
- let indexRow;
- let indexCol;
- let array = [];
- do {
-     row = +prompt("Nhập chiều cao mảng");
-     col = +prompt("Nhập chiều dài mảng");
-     if (row <= 0 || col <= 0 || isNaN(row) || isNaN(col)){
-         alert("Không hợp lệ, mời nhập lại");
-     }
- }
- while (row <= 0 || col <= 0 || isNaN(row) || isNaN(col));
+    let row;
+    let col;
+    let indexRow;
+    let indexCol;
+    let array = [];
+    do {
+        row = +prompt("Nhập chiều cao mảng");
+        col = +prompt("Nhập chiều dài mảng");
+        if (row <= 0 || col <= 0 || isNaN(row) || isNaN(col)) {
+            alert("Không hợp lệ, mời nhập lại");
+        }
+    }
+    while (row <= 0 || col <= 0 || isNaN(row) || isNaN(col));
 
- for (indexRow = 0; indexRow < row ; indexRow++) {
-     array[indexRow] = [];
-     for ( indexCol = 0; indexCol < col ; indexCol++) {
-         array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
-     }
- }
- document.write("Mảng là: " + "<br>");
+    for (indexRow = 0; indexRow < row; indexRow++) {
+        array[indexRow] = [];
+        for (indexCol = 0; indexCol < col; indexCol++) {
+            do {
+                array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
+                if(isNaN(array[indexRow][indexCol]));
+            }
+            while (isNaN(array[indexRow][indexCol]));
+        }
+    }
+    document.write("Mảng là: " + "<br>");
 
- for ( indexRow = 0; indexRow < array.length ; indexRow++) {
-     for ( indexCol = 0; indexCol < array.length ; indexCol++) {
-         document.write(array[indexRow][indexCol] + ",");
-     }
-     document.write("<br>");
- }
-// Hàm tìm max;
- function findMax (array){
-     let max = array[0][0] ;
-     for ( indexRow = 0; indexRow < array.length ; indexRow++) {
-         for ( indexCol = 0; indexCol < array.length ; indexCol++) {
-             if ( array[indexRow][indexCol] > max){
-                 max = array[indexRow][indexCol];
-             }
-         }
-     }
-     return max;
- }
- // Hàm tìm min
- function findMin (array){
-     let min = array[0][0] ;
-     for ( indexRow = 0; indexRow < array.length ; indexRow++) {
-         for ( indexCol = 0; indexCol < array.length ; indexCol++) {
-             if ( array[indexRow][indexCol] < min){
-                 min = array[indexRow][indexCol];
-             }
-         }
-     }
-     return min;
- }
+    for (indexRow = 0; indexRow < array.length; indexRow++) {
+        for (indexCol = 0; indexCol < array.length; indexCol++) {
+            document.write(array[indexRow][indexCol] + ",");
+        }
+        document.write("<br>");
+    }
 
- document.write(`Mảng có giá trị lớn nhất là: ${findMax(array)}` + "<br>");
- document.write(`Mảng có giá trị nhỏ nhất là: ${findMin(array)}`);
+    // Hàm tìm max;
+    function findMax(array) {
+        let max = array[0][0];
+        for (indexRow = 0; indexRow < array.length; indexRow++) {
+            for (indexCol = 0; indexCol < array.length; indexCol++) {
+                if (array[indexRow][indexCol] > max) {
+                    max = array[indexRow][indexCol];
+                }
+            }
+        }
+        return max;
+    }
+
+    // Hàm tìm min
+    function findMin(array) {
+        let min = array[0][0];
+        for (indexRow = 0; indexRow < array.length; indexRow++) {
+            for (indexCol = 0; indexCol < array.length; indexCol++) {
+                if (array[indexRow][indexCol] < min) {
+                    min = array[indexRow][indexCol];
+                }
+            }
+        }
+        return min;
+    }
+
+    document.write(`Mảng có giá trị lớn nhất là: ${findMax(array)}` + "<br>");
+    document.write(`Mảng có giá trị nhỏ nhất là: ${findMin(array)}`);
 
 </script>
 </body>

@@ -2,33 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 3</title>
 </head>
 <body>
 <script>
-  let n;
-  do{
-    n = +prompt("Nhập số lượng phần tử của mảng");
-    if (n <= 0 || isNaN(n)){
-      alert("Không hợp lệ, mời nhập lại");
+    let n = +prompt("nhập số lượng phần tử");
+    let arr = [];
+    for(let i = 0; i < n; i++){
+        arr.push(+prompt("nhập giá trị thứ : " + i));
     }
-  }
-  while (n <= 0 || isNaN(n));
-  let arr = [];
-  for (let i = 0; i < n ; i++) {
-    arr[i] = +prompt("Nhập vào phần tử thứ: " + (i+1));
-  }
-  document.write(arr);
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < arr[i+1] || arr[i] > arr[i +1] ){
-      alert("OK");
-      break;
+    let arrResult = [];
+    for(let i = 0; i < arr.length - 1; i++){
+        arrResult.push((arr[i] - arr[i+1]) < 0);
     }
-    else {
-      alert("No");
-      break;
+    let arrCount = [];
+    for (let i = 0; i < arrResult.length; i ++){
+        if (!arrCount.includes(arrResult[i])){
+            arrCount.push(arrResult[i]);
+        }
     }
-  }
+    if (arrCount.length === 1){
+        alert("Chuỗi Tăng hoặc Giảm");
+    }else {
+        alert("Chuỗi lộn xộn");
+    }
 </script>
 </body>
 </html>

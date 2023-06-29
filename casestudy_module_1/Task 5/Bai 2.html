@@ -25,7 +25,13 @@
     for (indexRow = 0; indexRow < row; indexRow++) {
         array[indexRow] = [];
         for (indexCol = 0; indexCol < col; indexCol++) {
-            array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
+            do {
+                array[indexRow][indexCol] = +prompt(`Nhập vào phần tử hàng ${indexRow} cột ${indexCol}`);
+                if (isNaN(array[indexRow][indexCol])){
+                    alert("Không hợp lệ, giá trị phần tử phải là số");
+                }
+            }
+            while (isNaN(array[indexRow][indexCol]));
         }
     }
 
@@ -39,22 +45,23 @@
     }
 
     // Hàm trả về 1 mảng các SNT tìm được trong một mảng 2 chiều;
-    function findPrime (array){
+    function findPrime(array) {
         let arrPrime = [];
         for (let indexRow = 0; indexRow < array.length; indexRow++) {
             for (let indexCol = 0; indexCol < array[indexRow].length; indexCol++) {
                 let count = 0;
-                for (let k = 2; k < array[indexRow][indexCol]/2 ; k++) {
-                    if (array[indexRow][indexCol] % k ===0 )
-                        count ++;
+                for (let k = 2; k < array[indexRow][indexCol] / 2; k++) {
+                    if (array[indexRow][indexCol] % k === 0)
+                        count++;
                 }
-                if (count === 0){
+                if (count === 0) {
                     arrPrime.push(array[indexRow][indexCol]);
                 }
             }
         }
         return arrPrime;
     }
+
     document.write(`Mảng có ${findAndCountPrime(array).length} số nguyên tố, đó là : ${findAndCountPrime(array)}`);
 </script>
 </body>

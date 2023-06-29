@@ -7,32 +7,40 @@
 <body>
 <script>
 
-// vòng lặp do while cho người dùng nhập vào số hàng và số cột của mảng; phải là số nguyên  lớn hơn 0.
+    // vòng lặp do while cho người dùng nhập vào số hàng và số cột của mảng; phải là số nguyên  lớn hơn 0.
     let row;
     let col;
-do{
-    row = +prompt("Nhập số hàng của ma trận");
-    col = +prompt("Nhập số cột của ma trận");
-    if( row <= 0 || col <=0 || isNaN(row) || isNaN(col) || row % 1 !== 0 || col % 1 !== 0){
-        alert("Không hợp lệ");
+    do {
+        row = +prompt("Nhập số hàng của ma trận");
+        col = +prompt("Nhập số cột của ma trận");
+        if (row <= 0 || col <= 0 || isNaN(row) || isNaN(col) || row % 1 !== 0 || col % 1 !== 0) {
+            alert("Không hợp lệ");
+        }
+
+    }
+    while (row <= 0 || col <= 0 || isNaN(row) || isNaN(col) || row % 1 !== 0 || col % 1 !== 0);
+    // Vòng lặp cho người dùng nhập các phần tử của mảng 2 chiều.
+    let arr = [];
+    for (let indexRow = 0; indexRow < row; indexRow++) {  // vòng lặp for ngoài chạy hàng
+        arr[indexRow] = [];
+        for (let indexCol = 0; indexCol < col; indexCol++) { // vòng lặp for trong chạy cột cho người dùng nhập giá trị phần tử;
+            do {
+                arr[indexRow][indexCol] = +prompt(`Nhập phần tử hàng ${indexRow} cột ${indexCol}`);
+                if (isNaN(arr[indexRow][indexCol])) {
+                    alert("Không hợp lệ, giá trị phần tử phải là số");
+                }
+            }
+            while (isNaN(arr[indexRow]));
+        }
+
     }
 
-}
-while(row <= 0 || col <=0 || isNaN(row)|| isNaN(col) || row % 1!== 0 || col % 1 !== 0 );
-// Vòng lặp cho người dùng nhập các phần tử của mảng 2 chiều.
-    let arr = [];
-    for (let indexRow = 0; indexRow < row ; indexRow++) {  // vòng lặp for ngoài chạy hàng
-             arr[indexRow] = [];
-        for (let indexCol = 0; indexCol < col ; indexCol++) {  // vòng lặp for trong chạy cột cho người dùng nhập giá trị phần tử;
-            arr[indexRow][indexCol] = +prompt(`Nhập phần tử hàng ${indexRow} cột ${indexCol}`);
-        }
-    }
     // Hàm tính tổng số chẵn trong mảng;
-    function sumOfEvenNumber (arr){
+    function sumOfEvenNumber(arr) {
         let sum = 0;
-        for (let indexRow = 0; indexRow < arr.length ; indexRow++) {
-            for (let indexCol = 0; indexCol < arr.length ; indexCol++) {
-                if (arr[indexRow][indexCol] % 2 === 0){
+        for (let indexRow = 0; indexRow < arr.length; indexRow++) {
+            for (let indexCol = 0; indexCol < arr.length; indexCol++) {
+                if (arr[indexRow][indexCol] % 2 === 0) {
                     sum += arr[indexRow][indexCol];
                 }
             }
@@ -42,8 +50,8 @@ while(row <= 0 || col <=0 || isNaN(row)|| isNaN(col) || row % 1!== 0 || col % 1 
 
 
     document.write("Mảng là: " + "<br>");
-    for (let index = 0; index < arr.length ; index++) { // vòng lặp ngoài xuống dòng
-        for (let index1 = 0; index1 < arr.length ; index1++) {  // vòng lặp trong in ra giá trị của phần tử;
+    for (let index = 0; index < arr.length; index++) { // vòng lặp ngoài xuống dòng
+        for (let index1 = 0; index1 < arr.length; index1++) {  // vòng lặp trong in ra giá trị của phần tử;
             document.write(arr[index][index1] + ",");
         }
         document.write("<br>");

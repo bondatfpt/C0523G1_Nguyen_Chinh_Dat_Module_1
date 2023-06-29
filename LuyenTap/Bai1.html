@@ -9,15 +9,18 @@
   let n;
   do {
     n = +prompt("Nhập số lượng phần tử của mảng");
-    if ( n <= 0 || isNaN(n)){
+    if ( n <= 0 || isNaN(n) || n % 1 !== 0){
       alert("Không hợp lệ");
     }
   }
-  while(n <= 0 || isNaN(n));
+  while(n <= 0 || isNaN(n) || n % 1 !==0);
   let array = [];
   for (let index = 0; index < n ; index++) {
     array[index] = +prompt("Nhập vào phần tử thứ " + (index +1));
   }
+
+  document.write(array);
+
   let count = 0;
   for (let i = 0; i < array.length ; i++) {
     if (array[i] % 2 === 0){

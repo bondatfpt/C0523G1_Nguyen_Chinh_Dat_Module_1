@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(string) {
+        let string1 = string.toLowerCase();
+        let arrString = string1.split("");
+        let result = [];
+        for (let i = 0; i < arrString.length; i++) {
+            switch (arrString[i]) {
+                case "u":
+                case "e":
+                case "o":
+                case "a":
+                case "i":
+                    result.push(arrString[i]);
+                    break;
+            }
+        }
+        return result;
+    }
+
+    function removeSamecharacter(array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++) {
+            let character = array[i]
+            if (result.indexOf(character) === -1){
+                result.push(character);
+            }
+        }
+        return result;
+    }
+
+    let string = " length tow arcade index";
+    document.write(checkString(string) + "<br>")
+    document.write(removeSamecharacter(checkString(string)));
+</script>
+</body>
+</html>

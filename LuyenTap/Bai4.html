@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkString(string){
+    let count1 = 0;
+    let count2 = 0;
+    for (let i = 0; i < string.length; i++) {
+      if (string[i].toUpperCase() === string[i]){
+        count1++;
+      }
+      else {
+        count2++;
+      }
+    }
+    if (count1 === count2){
+      return true;
+    }
+    return false;
+  }
+  let string = prompt("Nhap 1 chuoi bat ky");
+  document.write(checkString(string));
+</script>
+</body>
+</html>
